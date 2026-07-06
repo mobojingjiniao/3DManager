@@ -1,0 +1,57 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# Local configuration (sdk paths etc.)
+local.properties
+
+# IDE - Android Studio / IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+captures/
+.navigation/
+.cxx/
+
+# VSCode / Cursor
+.vscode/
+.cursor/
+
+# Filament generated assets
+**/filament-gen/
+**/matc-generated/
+**/filament-binaries/
+
+# SceneView generated shaders
+**/sceneview-shader-cache/
+**/sceneview-assets/
+
+# Logs / OS
+*.log
+*.hprof
+.DS_Store
+Thumbs.db
+
+# Keystore secrets (NEVER commit)
+*.jks
+*.keystore
+release/
+google-services.json
+keystore.properties
+
+# Test artifacts
+**/build/reports/
+**/build/outputs/apk/androidTest/
+**/build/intermediates/
+
+# Maestro
+.maestro/
+.maestro-flows.zip
+
+# Local scratch
+scratch/
+tmp/
