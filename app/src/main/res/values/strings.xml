@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">3DManager</string>
+    <string name="wallpaper_service_label">3DManager Live Wallpaper</string>
+</resources>

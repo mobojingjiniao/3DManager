@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- Whitelist AGaaP assets only. Exclude cached 3DGS scenes (regenerated from cloud). -->
+    <include domain="sharedpref" path="."/>
+    <include domain="database" path="."/>
+    <exclude domain="external" path="."/>
+</full-backup-content>
