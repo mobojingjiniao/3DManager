@@ -1,0 +1,24 @@
+# 3DManager — Maestro E2E flow: theme switch (Phase 4)
+#
+# Verifies the theme picker reflects the active ThemePack and persists
+# the choice across process restarts.
+
+appId: com.threed.manager.debug
+name: Theme switch persists across restart
+description: |
+  Phase 4 acceptance:
+    - User opens Theme Gallery → picks "Midnight"
+    - App restart → Theme is still "Midnight"
+    - AdaptiveRenderStrategy tier indicator updates accordingly
+
+tags: [phase4, theme, persistence]
+
+# Re-run after we have feature/themes in Phase 4 — for now the
+# MainActivity only renders "3DManager" so this flow documents intent.
+launchArgs:
+  clearState: true
+
+steps:
+  - launchApp
+  - assertVisible: "3DManager"
+  - takeScreenshot: theme_switch_baseline.png

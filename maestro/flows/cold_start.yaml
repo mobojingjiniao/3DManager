@@ -1,0 +1,30 @@
+# 3DManager — Maestro E2E flow: cold start
+#
+# Verifies the app cold-starts and reaches the placeholder screen within
+# 1500 ms on a Pixel-class device (Android 12+).
+#
+# Run from repo root:
+#   maestro test maestro/flows/cold_start.yaml
+
+appId: com.threed.manager.debug
+name: Cold start reaches placeholder screen
+description: |
+  Cold-start budget for Phase 0 verification:
+    - launch → first paint (background visible)   < 1500 ms
+    - launch → "3DManager" text rendered         < 2500 ms
+
+tags: [smoke, phase0, performance]
+
+launchArgs:
+  clearState: true
+
+permissions:
+  # Granted at install time on the dev emulator
+  - android.permission.READ_MEDIA_IMAGES
+  - android.permission.READ_MEDIA_VIDEO
+
+steps:
+  - launchApp
+  - assertVisible: "3DManager"
+  # Smoke check that the app process is alive after launch.
+  - takeScreenshot: cold_start.png

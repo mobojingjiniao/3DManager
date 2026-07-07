@@ -1,0 +1,26 @@
+# 3DManager — Maestro E2E flow: edit Gaussian opacity (Phase 3)
+#
+# Verifies the P0 real-time editor path: lasso select a region, drag
+# the alpha slider, assert the value persists across undo/redo.
+
+appId: com.threed.manager.debug
+name: Edit Gaussian opacity via Inspector + Undo/Redo
+description: |
+  Phase 3 acceptance (P0 real-time edit):
+    - Open a scene in Editor
+    - Select via brush
+    - Drag Inspector alpha slider to 0.5
+    - Undo → alpha returns to 1.0
+    - Redo → alpha returns to 0.5
+
+tags: [phase3, editor, realtime]
+
+launchArgs:
+  clearState: true
+
+steps:
+  - launchApp
+  - assertVisible: "3DManager"
+  # Phase 3 is not yet wired in MainActivity; this flow is a placeholder
+  # until EditorScreen is shipped. Documented intent.
+  - takeScreenshot: edit_alpha_intent.png

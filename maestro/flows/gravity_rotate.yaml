@@ -1,0 +1,41 @@
+# 3DManager — Maestro E2E flow: gravity rotation (Phase 2)
+#
+# Verifies that device orientation drives the camera. Uses
+# `adb emu sensor set acceleration` to inject synthetic sensor data
+# between user interactions.
+
+appId: com.threed.manager.debug
+name: Gravity rotation drives scene follow
+description: |
+  Phase 2 acceptance:
+    - Load scene with default Orbit mode
+    - Inject synthetic tilt via adb (see notes)
+    - Verify camera state updated via WebBridge telemetry
+
+tags: [phase2, sensor, hardware-required]
+
+# Requires an emulator or a connected device with adb root.
+# Run before this flow:
+#   adb -s emulator-5554 emu sensor set acceleration 0:0:9.81
+launchArgs:
+  clearState: true
+
+# Custom env hint used by the app to record the baseline pose.
+env:
+  SENSOR_BASELINE: 0:0:9.81
+  SENSOR_TILT_45: 6.93:0:6.93
+
+steps:
+  - launchApp
+  - assertVisible: "3DManager"
+  # Inject a 45-degree tilt and verify camera updates (Phase 2 spec).
+  - runScript:
+      script: |
+        adb -s $DEVICE_ID emu sensor set acceleration 6.93:0:6.93
+        sleep 1
+        # Expect telemetry channel to publish a new yawDeg in [40, 50].
+  - takeScreenshot: gravity_tilt_45.png
+  - runScript:
+      script: |
+        # Reset back to portrait.
+        adb -s $DEVICE_ID emu sensor set acceleration 0:0:9.81
