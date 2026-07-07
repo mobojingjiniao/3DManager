@@ -22,5 +22,7 @@ tasks.withType<Test>().configureEach {
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.kotlinx.serialization.json)
+    implementation(project(":core:scene-api"))
+    testImplementation(project(":core:scene-api"))
     testImplementation(libs.bundles.test.unit)
 }
