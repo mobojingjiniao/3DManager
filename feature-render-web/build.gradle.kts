@@ -15,7 +15,6 @@ android {
     buildFeatures {
         buildConfig = true
     }
-    // Capacitor dependencies deferred to Phase 1.3 (require network artifacts at install time).
 }
 
 tasks.withType<Test>().configureEach {
@@ -24,6 +23,10 @@ tasks.withType<Test>().configureEach {
 
 dependencies {
     implementation(project(":core:scene-api"))
+
+    // Capacitor 7.x — provides BridgeActivity, JS<->Kotlin bridge plumbing
+    // Phase 1.3: real integration; web assets (Spark + three.js) live in src/main/assets/public/
+    implementation(libs.capacitor.core)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.bundles.lifecycle)

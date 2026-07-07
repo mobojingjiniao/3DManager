@@ -9,8 +9,7 @@ core-ktx = "1.15.0"
 lifecycle = "2.8.7"
 activity-compose = "1.9.3"
 
-# Compose — pinned to 1.7.2 (cached locally). Material 1.0.0 (M2 cached).
-# Material3 upgrade is Phase 4 task and pulls network deps.
+# Compose — pinned to 1.7.2 (cached locally). Material 1.7.2 cached.
 compose-ui = "1.7.2"
 material = "1.7.2"
 
@@ -33,8 +32,9 @@ kotlinx-serialization = "1.7.3"
 # Image loading
 coil = "3.0.4"
 
-# 3D / Render — Capacitor (web render) and Filament (native backup) are deferred
-# to Phase 1.3 / Phase 5 because their artifacts require network access.
+# 3D / Render
+capacitor-core = "7.4.0"
+filament-android = "1.58.0"  # Aliyun mirror has 1.58.0; 1.72.1 unreachable from here
 
 # Testing
 junit5 = "5.11.4"
@@ -86,6 +86,16 @@ androidx-room-compiler = { group = "androidx.room", name = "room-compiler", vers
 
 # Serialization
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+
+# 3D / Render
+capacitor-core = { group = "com.capacitorjs", name = "core", version.ref = "capacitor-core" }
+filament-android = { group = "com.google.android.filament", name = "filament-android", version.ref = "filament-android" }
+filament-utils-android = { group = "com.google.android.filament", name = "filament-utils-android", version.ref = "filament-android" }
+filament-gltfio-android = { group = "com.google.android.filament", name = "gltfio-android", version.ref = "filament-android" }
+
+# Coil 3
+coil-compose = { group = "io.coil-kt.coil3", name = "coil-compose", version.ref = "coil" }
+coil-network = { group = "io.coil-kt.coil3", name = "coil-network-okhttp", version.ref = "coil" }
 
 # Testing
 junit5-jupiter-api = { group = "org.junit.jupiter", name = "junit-jupiter-api", version.ref = "junit5" }
