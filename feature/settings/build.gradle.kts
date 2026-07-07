@@ -17,6 +17,10 @@ android {
     kotlinOptions { jvmTarget = "17" }
 }
 
+tasks.withType<Test>().configureEach {
+    useJUnitPlatform()
+}
+
 dependencies {
     implementation(project(":core:scene-api"))
     implementation(project(":core:data"))

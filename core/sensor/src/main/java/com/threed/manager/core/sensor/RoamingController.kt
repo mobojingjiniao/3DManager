@@ -63,24 +63,41 @@ class RoamingController(
 
     /** Phase 2.4: feed device-rotation (gravity-based) to the active mode. */
     fun feedSensor(rotation: RotationVector) {
-        // Stub for Phase 2.4; ignored for now so unit tests don't depend on
-        // real quaternion math. Implementation will convert the quaternion
-        // to yaw/pitch and apply with the same deadband / clamp policy.
+        val (yaw, pitch) = quaternionToYawPitch(rotation)
+        // Sensor readings are absolute orientations (not deltas). We compute
+        // the change from the current state and apply the same deadband /
+        // clamp policy, but with a *different* sign convention than drag:
+        // device tilted forward (+pitch) → look up (+pitch), i.e. no flip.
+        val current = _camera.value
+        val dYaw = applyDeadband(yaw - current.yawDeg)
+        val dPitch = applyDeadband(pitch - current.pitchDeg)
+        val nextYaw = current.yawDeg + dYaw
+        val nextPitch = (current.pitchDeg + dPitch)
+            .coerceIn(-pitchClampDeg, pitchClampDeg)
+        _camera.value = current.copy(yawDeg = nextYaw, pitchDeg = nextPitch)
     }
 
     private fun updateOrbit(current: CameraState, dx: Float, dy: Float) {
         val dYaw = applyDeadband(dx)
         val dPitch = applyDeadband(dy)
         val nextYaw = current.yawDeg + dYaw * sensitivity
-        val nextPitch = (current.pitchDeg + dPitch * sensitivity)
+        // Drag-up (dy < 0) → look up (positive pitch); convention matches
+        // Blender / Spark / 3DManager. Sign is flipped here on purpose.
+        val nextPitch = (current.pitchDeg - dPitch * sensitivity)
             .coerceIn(-pitchClampDeg, pitchClampDeg)
         _camera.value = current.copy(yawDeg = nextYaw, pitchDeg = nextPitch)
     }
 
     private fun updateTrackball(current: CameraState, dx: Float, dy: Float) {
-        // Trackball behaves like Orbit but applies the same deadband in both
-        // axes. Future versions can add inertia; Phase 2.3 is deterministic.
-        updateOrbit(current, dx, dy)
+        // Trackball applies dx → yaw and dy → pitch directly, no sign-flip
+        // (matches Blender / Maya "trackball" behavior). Same deadband and
+        // pitch clamp as Orbit.
+        val dYaw = applyDeadband(dx)
+        val dPitch = applyDeadband(dy)
+        val nextYaw = current.yawDeg + dYaw * sensitivity
+        val nextPitch = (current.pitchDeg + dPitch * sensitivity)
+            .coerceIn(-pitchClampDeg, pitchClampDeg)
+        _camera.value = current.copy(yawDeg = nextYaw, pitchDeg = nextPitch)
     }
 
     private fun updateFps(current: CameraState, dx: Float, dy: Float) {

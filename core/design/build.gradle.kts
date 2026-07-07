@@ -17,6 +17,10 @@ android {
     kotlinOptions { jvmTarget = "17" }
 }
 
+tasks.withType<Test>().configureEach {
+    useJUnitPlatform()
+}
+
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.bundles.compose)

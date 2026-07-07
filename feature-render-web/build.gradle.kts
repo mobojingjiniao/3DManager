@@ -18,6 +18,10 @@ android {
     // Capacitor dependencies deferred to Phase 1.3 (require network artifacts at install time).
 }
 
+tasks.withType<Test>().configureEach {
+    useJUnitPlatform()
+}
+
 dependencies {
     implementation(project(":core:scene-api"))
 

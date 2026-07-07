@@ -18,6 +18,10 @@ android {
     // Filament dependencies deferred to Phase 5 (aar artifacts require network at install time).
 }
 
+tasks.withType<Test>().configureEach {
+    useJUnitPlatform()
+}
+
 dependencies {
     implementation(project(":core:scene-api"))
     implementation(project(":core:gs-codec"))

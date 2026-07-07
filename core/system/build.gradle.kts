@@ -15,6 +15,10 @@ android {
     buildFeatures { buildConfig = true }
 }
 
+tasks.withType<Test>().configureEach {
+    useJUnitPlatform()
+}
+
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.bundles.coroutines)

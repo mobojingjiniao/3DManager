@@ -54,6 +54,10 @@ android {
     }
 }
 
+tasks.withType<Test>().configureEach {
+    useJUnitPlatform()
+}
+
 dependencies {
     implementation(project(":core:scene-api"))
     implementation(project(":core:gs-codec"))
