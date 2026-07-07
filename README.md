@@ -87,5 +87,8 @@ app/build/outputs/apk/debug/app-debug.apk   8.6MB
 
 ## 参考
 
-完整方案见工作空间 plan v2：`/home/mobo/.claude/plans/3d-3d-graceful-dove.md`
-（包含 3DGS 优先 / Spark vs Filament 双轨 / 5 项原子编辑 / 4 档自适应 Live Wallpaper / 全开源测试）
+- **完整方案（plan v2）**：`/home/mobo/.claude/plans/3d-3d-graceful-dove.md`（3DGS 优先 / Spark+Filament 双轨 / 5 项原子编辑 / 4 档自适应 Live Wallpaper / 全开源测试）
+- **模块详细设计**：[`docs/architecture/MODULES.md`](docs/architecture/MODULES.md)
+- **数据流 & 状态机**：[`docs/architecture/DATA_FLOW.md`](docs/architecture/DATA_FLOW.md)
+- **API 契约**：[`docs/architecture/API_CONTRACTS.md`](docs/architecture/API_CONTRACTS.md)
+- **UI 设计草图**：[`docs/architecture/UI_DESIGN.md`](docs/architecture/UI_DESIGN.md)
