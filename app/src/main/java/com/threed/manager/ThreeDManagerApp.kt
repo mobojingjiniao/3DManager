@@ -1,11 +1,10 @@
 package com.threed.manager
 
 import android.app.Application
+import com.threed.manager.core.sensor.AndroidSensorSource
 import com.threed.manager.core.sensor.FakeSensorSource
-import com.threed.manager.core.sensor.GravityVector
 import com.threed.manager.core.sensor.RoamingController
 import com.threed.manager.core.sensor.RoamingMode
-import com.threed.manager.core.sensor.RotationVector
 import com.threed.manager.core.sceneapi.SplatController
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
@@ -13,31 +12,45 @@ import kotlinx.coroutines.SupervisorJob
 /**
  * Root Application for 3DManager.
  *
- * Holds a single shared instance of the demo wiring:
- *  - [FakeSensorSource] for synthetic IMU events
- *  - [SplatController] backed by a no-op WebBridge (Phase 1.3 swap-in)
- *  - [RoamingController] for camera state
+ * Service-locator-style wiring. Holds:
+ *  - [sensorSource] : AndroidSensorSource (real SensorManager). Tests +
+ *    Compose previews can swap in [FakeSensorSource].
+ *  - [splatController] : state machine for the active scene (backed
+ *    by a no-op [com.threed.manager.core.sceneapi.WebBridge] until
+ *    Phase 1.3 swaps it for the Capacitor plugin).
+ *  - [roamingController] : state machine for camera orbit.
  *
- * In Phase 1.3+ this class wires the real Capacitor-backed WebBridge
- * and AndroidSensorSource via Hilt; for now it serves as a hand-wired
- * service locator so the emulator can verify the architecture end-to-end.
+ * Phase 1.3+ replaces this with Hilt-injected modules; the surface
+ * stays identical.
  */
 class ThreeDManagerApp : Application() {
 
-    val sensorSource: FakeSensorSource by lazy { FakeSensorSource() }
+    /**
+     * Use the real Android sensor source so `adb emu sensor set
+     * acceleration ...` actually drives the camera. Swapping in
+     * [FakeSensorSource] in tests / previews keeps the rest of the
+     * code path identical.
+     */
+    val sensorSource: AndroidSensorSource by lazy {
+        AndroidSensorSource(
+            context = this,
+            externalScope = CoroutineScope(SupervisorJob()),
+        )
+    }
+
     val splatController: SplatController by lazy {
         SplatController(bridge = NoOpWebBridge(), scope = CoroutineScope(SupervisorJob()))
     }
+
     val roamingController: RoamingController by lazy {
         RoamingController(mode = RoamingMode.Orbit, sensitivity = 1.0f, deadbandDeg = 5f)
     }
 
     override fun onCreate() {
         super.onCreate()
-        // Seed the demo with synthetic sensor data so the architecture
-        // is observable from the very first frame.
-        sensorSource.emitGravity(GravityVector(0f, 0f, -9.81f))
-        sensorSource.emitRotation(RotationVector(0f, 0f, 0f, 1f))
+        // AndroidSensorSource needs an explicit start() to begin
+        // receiving sensor events. Without this the flow stays empty.
+        sensorSource.start()
     }
 }
 
