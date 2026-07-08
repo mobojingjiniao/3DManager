@@ -21,7 +21,7 @@ import kotlin.math.asin
  * "Z-up" version of this formula would give yaw = pitch = 0 for a pure
  * X rotation, which is wrong for a Y-up camera.
  */
-internal fun quaternionToYawPitch(q: RotationVector): Pair<Float, Float> {
+fun quaternionToYawPitch(q: RotationVector): Pair<Float, Float> {
     val x = q.x
     val y = q.y
     val z = q.z
