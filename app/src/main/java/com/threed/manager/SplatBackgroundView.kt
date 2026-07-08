@@ -39,6 +39,31 @@ class SplatBackgroundView @JvmOverloads constructor(
     private val splatPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         style = Paint.Style.FILL
     }
+    private val glowPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+        style = Paint.Style.FILL
+    }
+    private val horizonPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+        color = Color.argb(180, 60, 90, 140)
+        strokeWidth = 2f
+        style = Paint.Style.STROKE
+    }
+    private val gridPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+        color = Color.argb(60, 80, 100, 140)
+        strokeWidth = 1f
+        style = Paint.Style.STROKE
+    }
+    private val skyPaint = Paint().apply {
+        shader = android.graphics.LinearGradient(
+            0f, 0f, 0f, 1000f,
+            intArrayOf(
+                Color.rgb(8, 12, 28),    // top — deep night
+                Color.rgb(20, 25, 50),    // mid — purple
+                Color.rgb(35, 30, 60),    // horizon — warm purple
+            ),
+            floatArrayOf(0f, 0.5f, 1f),
+            android.graphics.Shader.TileMode.CLAMP,
+        )
+    }
     private val textPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         color = Color.WHITE
         textSize = 36f
@@ -133,42 +158,76 @@ class SplatBackgroundView @JvmOverloads constructor(
         val h = height.toFloat()
         if (w <= 0f || h <= 0f) return
 
+        // Sky gradient
+        canvas.drawRect(0f, 0f, w, h, skyPaint)
+
         val cx = w * 0.5f
-        val cy = h * 0.5f
+        val cy = h * 0.55f  // horizon slightly below center
         val yawRad = (camera.yawDeg * Math.PI / 180.0).toFloat()
         val pitchRad = (camera.pitchDeg * Math.PI / 180.0).toFloat()
         val cosY = cos(yawRad); val sinY = sin(yawRad)
         val cosP = cos(pitchRad); val sinP = sin(pitchRad)
 
         // Distance from camera to scene origin. Larger = wider FOV.
-        val d = 5f
-        val focal = 380f
-        val hudTop = h - 360f
+        val d = 4f
+        val focal = 800f
+        val horizonY = cy + (0f * focal) / d  // y=0 ground plane
+
+        // Grid lines (perspective) — fakes a wireframe floor.
+        for (i in -3..3) {
+            val gridX = i * 0.5f
+            val x1 = gridX * cosY - 3f * sinY
+            val z1 = gridX * sinY + 3f * cosY
+            val x2 = gridX * cosY + 3f * sinY
+            val z2 = gridX * sinY - 3f * cosY
+            for (t in 0..20) {
+                val a = t / 20f
+                val ax = x1 * (1f - a) + x2 * a
+                val az = z1 * (1f - a) + z2 * a
+                val camZ = az + d
+                if (camZ <= 0.1f) continue
+                val px = cx + (ax * focal) / camZ
+                val py = cy + (0f * focal) / camZ
+                canvas.drawCircle(px, py, 2f, gridPaint)
+            }
+        }
+
+        // Horizon line
+        canvas.drawLine(0f, horizonY, w, horizonY, horizonPaint)
 
         // Draw splats sorted back-to-front so closer dots overlay.
         val ordered = splats.sortedBy { it.z }
         for (s in ordered) {
-            // Rotate around Y (yaw) then X (pitch).
             val x1 = s.x * cosY - s.z * sinY
             val z1 = s.x * sinY + s.z * cosY
             val y1 = s.y
             val y2 = y1 * cosP - z1 * sinP
             val z2 = y1 * sinP + z1 * cosP
-            // Camera looks at origin from +z; project.
             val camZ = z2 + d
             if (camZ <= 0.1f) continue
             val px = cx + (x1 * focal) / camZ
             val py = cy + (y2 * focal) / camZ
-            if (px < 0f || px > w || py < 0f || py > h) continue
+            if (px < -50f || px > w + 50f || py < -50f || py > h + 50f) continue
             val size = (s.scale * focal) / camZ
-            val alpha = (255f * (d - 0.5f) / (d + 2f)).coerceIn(0f, 255f)
+            val alpha = (255f * (d - 0.3f) / (d + 1.5f)).coerceIn(40f, 255f)
             splatPaint.color = Color.argb(
                 alpha.toInt(),
                 Color.red(s.color),
                 Color.green(s.color),
                 Color.blue(s.color),
             )
-            canvas.drawCircle(px, py, size.coerceAtLeast(1.5f), splatPaint)
+            val drawSize = size.coerceAtLeast(4f)
+            canvas.drawCircle(px, py, drawSize, splatPaint)
+            // Outer glow for brighter, larger splats
+            if (drawSize > 6f) {
+                glowPaint.color = Color.argb(
+                    (alpha * 0.4f).toInt().coerceIn(0, 255),
+                    Color.red(s.color),
+                    Color.green(s.color),
+                    Color.blue(s.color),
+                )
+                canvas.drawCircle(px, py, drawSize * 1.8f, glowPaint)
+            }
         }
 
         // HUD overlay at the bottom
@@ -210,8 +269,8 @@ class SplatBackgroundView @JvmOverloads constructor(
             val y = r * cos(phi) + 0.4f
             val z = r * sin(phi) * sin(theta)
             out += Splat3D(x, y, z,
-                scale = rng.nextDouble(0.02, 0.05).toFloat(),
-                color = Color.rgb(80, 130, 220))
+                scale = rng.nextDouble(0.04, 0.10).toFloat(),
+                color = Color.rgb(120, 170, 240))
         }
         // Ground — green scattered dots in lower hemisphere
         repeat(120) {
@@ -221,7 +280,7 @@ class SplatBackgroundView @JvmOverloads constructor(
             val z = r * sin(theta)
             val y = rng.nextDouble(-1.2, -0.1).toFloat()
             out += Splat3D(x, y, z,
-                scale = rng.nextDouble(0.015, 0.04).toFloat(),
+                scale = rng.nextDouble(0.03, 0.08).toFloat(),
                 color = Color.rgb(80 + rng.nextInt(-20, 20), 200 + rng.nextInt(-30, 30), 80))
         }
         // Object — central orange cluster forming a "doughnut"
@@ -233,7 +292,7 @@ class SplatBackgroundView @JvmOverloads constructor(
             val x = r * cos(theta)
             val z = r * sin(theta) + tilt
             out += Splat3D(x, y, z,
-                scale = rng.nextDouble(0.02, 0.05).toFloat(),
+                scale = rng.nextDouble(0.05, 0.12).toFloat(),
                 color = Color.rgb(
                     240 + rng.nextInt(-15, 0),
                     110 + rng.nextInt(-30, 30),
@@ -247,7 +306,7 @@ class SplatBackgroundView @JvmOverloads constructor(
             val y = rng.nextDouble(-0.4, 0.4).toFloat()
             out += Splat3D(
                 r * cos(theta), y, r * sin(theta),
-                scale = 0.06f,
+                scale = 0.14f,
                 color = Color.rgb(120, 220, 255),
             )
         }
@@ -259,8 +318,8 @@ class SplatBackgroundView @JvmOverloads constructor(
             val z = r * sin(theta)
             val y = rng.nextDouble(-1.5, 1.5).toFloat()
             out += Splat3D(x, y, z,
-                scale = rng.nextDouble(0.015, 0.04).toFloat(),
-                color = Color.rgb(255, 80 + rng.nextInt(0, 60), 60 + rng.nextInt(0, 60)))
+                scale = rng.nextDouble(0.04, 0.10).toFloat(),
+                color = Color.rgb(255, 100 + rng.nextInt(0, 60), 80 + rng.nextInt(0, 60)))
         }
         return out
     }
