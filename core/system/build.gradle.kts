@@ -21,6 +21,7 @@ tasks.withType<Test>().configureEach {
 
 dependencies {
     implementation(libs.androidx.core.ktx)
+    implementation(project(":core:sensor"))
     implementation(libs.bundles.coroutines)
 
     testImplementation(libs.bundles.test.unit)
