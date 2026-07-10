@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 2400" width="1080" height="2400">
+  <defs>
+    <radialGradient id="meshAurora" cx="50%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#9B5CFF" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#06070F" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fabGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6EFFB7"/>
+      <stop offset="100%" stop-color="#9B5CFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="2400" fill="#06070F"/>
+  <rect width="1080" height="2400" fill="url(#meshAurora)"/>
+  <g transform="translate(60, 130)" stroke="#F5F7FF" stroke-width="2.5" fill="none">
+    <polyline points="14,0 0,14 14,28"/>
+  </g>
+  <text x="120" y="160" fill="#F5F7FF" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="36" letter-spacing="-0.8">Import avatar</text>
+  <g transform="translate(60, 280)">
+    <rect width="960" height="320" rx="28" fill="#FFFFFF" fill-opacity="0.04" stroke="#9B5CFF" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="12 8"/>
+    <g transform="translate(480, 140)" fill="none" stroke="#9B5CFF" stroke-width="3">
+      <circle r="40"/>
+      <line x1="-20" y1="0" x2="20" y2="0"/>
+      <line x1="0" y1="-20" x2="0" y2="20"/>
+    </g>
+    <text x="480" y="240" fill="#F5F7FF" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="28" text-anchor="middle">Pick a file</text>
+    <text x="480" y="275" fill="#F5F7FF" fill-opacity="0.48" font-family="JetBrains Mono, monospace" font-size="14" text-anchor="middle">.ply - .splat - .ksplat - .spz - .glb</text>
+  </g>
+  <text x="60" y="700" fill="#F5F7FF" fill-opacity="0.48" font-family="Inter, sans-serif" font-weight="600" font-size="11" letter-spacing="1.4">RECENT IMPORTS</text>
+  <g font-family="Inter, sans-serif" font-size="16">
+    <g transform="translate(60, 730)">
+      <rect width="960" height="80" rx="20" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+      <text x="30" y="48" fill="#F5F7FF" font-weight="500">sample.ksplat</text>
+      <text x="700" y="48" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="14">12.4 MB</text>
+      <text x="900" y="48" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="14" text-anchor="end">2d</text>
+    </g>
+    <g transform="translate(60, 830)">
+      <rect width="960" height="80" rx="20" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+      <text x="30" y="48" fill="#F5F7FF" font-weight="500">living_room.spz</text>
+      <text x="700" y="48" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="14">48.0 MB</text>
+      <text x="900" y="48" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="14" text-anchor="end">1w</text>
+    </g>
+  </g>
+  <text x="60" y="1000" fill="#F5F7FF" fill-opacity="0.48" font-family="Inter, sans-serif" font-weight="600" font-size="11" letter-spacing="1.4">FROM CLOUD (PORIN)</text>
+  <g transform="translate(60, 1030)">
+    <rect width="960" height="120" rx="20" fill="#FFFFFF" fill-opacity="0.04" stroke="#9B5CFF" stroke-opacity="0.6" stroke-width="1.5"/>
+    <g transform="translate(60, 60)" stroke="#9B5CFF" stroke-width="2" fill="none">
+      <rect x="-16" y="-16" width="32" height="32" rx="4"/>
+      <line x1="-16" y1="-8" x2="-8" y2="-8"/>
+      <line x1="-8" y1="-8" x2="-8" y2="-16"/>
+    </g>
+    <text x="120" y="55" fill="#F5F7FF" font-family="Inter, sans-serif" font-weight="500" font-size="18">Paste link or scan QR</text>
+    <text x="120" y="85" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="14">porin.app/a/...</text>
+  </g>
+  <g transform="translate(60, 1200)">
+    <rect width="960" height="120" rx="20" fill="url(#fabGradient)" fill-opacity="0.15" stroke="#6EFFB7" stroke-opacity="0.4"/>
+    <text x="480" y="55" fill="#6EFFB7" font-family="Inter, sans-serif" font-weight="700" font-size="18" text-anchor="middle">Tip</text>
+    <text x="480" y="90" fill="#F5F7FF" fill-opacity="0.72" font-family="Inter, sans-serif" font-size="16" text-anchor="middle">Use FormScan to capture and upload directly.</text>
+  </g>
+</svg>

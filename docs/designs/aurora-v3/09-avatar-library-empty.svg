@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 2400" width="1080" height="2400">
+  <defs>
+    <radialGradient id="meshAurora" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#9B5CFF" stop-opacity="0.20"/>
+      <stop offset="50%" stop-color="#6EFFB7" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#06070F" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fabGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6EFFB7"/>
+      <stop offset="100%" stop-color="#9B5CFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="2400" fill="#06070F"/>
+  <rect width="1080" height="2400" fill="url(#meshAurora)"/>
+  <text x="60" y="180" fill="#F5F7FF" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="56" letter-spacing="-1.5">Avatars</text>
+  <g transform="translate(540, 1100)">
+    <circle r="200" fill="none" stroke="#6EFFB7" stroke-opacity="0.4" stroke-width="2"/>
+    <circle r="160" fill="none" stroke="#9B5CFF" stroke-opacity="0.5" stroke-width="2"/>
+    <circle r="120" fill="none" stroke="#6EFFB7" stroke-opacity="0.3" stroke-width="1"/>
+    <circle r="40" fill="#9B5CFF" fill-opacity="0.3"/>
+    <circle r="6" fill="#6EFFB7"/>
+  </g>
+  <text x="540" y="1500" fill="#F5F7FF" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="36" text-anchor="middle" letter-spacing="-0.8">Your stage is empty.</text>
+  <text x="540" y="1550" fill="#F5F7FF" fill-opacity="0.72" font-family="Inter, sans-serif" font-size="20" text-anchor="middle">Capture your first avatar or import a splat file.</text>
+  <g transform="translate(180, 1640)">
+    <rect width="340" height="64" rx="32" fill="url(#fabGradient)"/>
+    <text x="170" y="42" fill="#06070F" font-family="Inter, sans-serif" font-weight="700" font-size="18" text-anchor="middle">Capture</text>
+  </g>
+  <g transform="translate(560, 1640)">
+    <rect width="340" height="64" rx="32" fill="#FFFFFF" fill-opacity="0.04" stroke="#9B5CFF" stroke-opacity="0.6" stroke-width="1.5"/>
+    <text x="170" y="42" fill="#9B5CFF" font-family="Inter, sans-serif" font-weight="700" font-size="18" text-anchor="middle">Import</text>
+  </g>
+</svg>

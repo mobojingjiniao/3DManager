@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 2400" width="1600" height="2400">
+  <defs>
+  <radialGradient id="meshAurora" cx="50%" cy="40%" r="60%">
+    <stop offset="0%" stop-color="#6EFFB7" stop-opacity="0.35"/>
+    <stop offset="50%" stop-color="#9B5CFF" stop-opacity="0.15"/>
+    <stop offset="100%" stop-color="#06070F" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="meshBackdrop" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#03040A"/>
+    <stop offset="100%" stop-color="#06070F"/>
+  </linearGradient>
+  <linearGradient id="fabGradient" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#6EFFB7"/>
+    <stop offset="100%" stop-color="#9B5CFF"/>
+  </linearGradient>
+  <linearGradient id="auroraHairline" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#6EFFB7" stop-opacity="0"/>
+    <stop offset="50%" stop-color="#9B5CFF" stop-opacity="0.8"/>
+    <stop offset="100%" stop-color="#6EFFB7" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+  <rect width="1600" height="2400" fill="url(#meshBackdrop)"/>
+  <rect width="1600" height="2400" fill="url(#meshAurora)"/>
+  <text x="80" y="120" fill="#F5F7FF" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="56" letter-spacing="-1.5">CINEMATIC DARK AURORA</text>
+  <text x="80" y="170" fill="#F5F7FF" fill-opacity="0.72" font-family="'Inter', sans-serif" font-weight="500" font-size="22">3DManager v3 · Design System Reference</text>
+  <line x1="80" y1="200" x2="1520" y2="200" stroke="url(#fabGradient)" stroke-width="1.5" stroke-opacity="0.6"/>
+
+  <text x="80" y="270" fill="#F5F7FF" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="36" letter-spacing="-0.8">01 · Color Tokens</text>
+
+  <text x="80" y="320" fill="#9FA8C7" font-family="'JetBrains Mono', monospace" font-size="14">void</text>
+  <rect x="80" y="340" width="220" height="120" rx="28" fill="#06070F" stroke="#F5F7FF" stroke-opacity="0.06"/>
+  <rect x="320" y="340" width="220" height="120" rx="28" fill="#03040A" stroke="#F5F7FF" stroke-opacity="0.06"/>
+  <rect x="560" y="340" width="220" height="120" rx="28" fill="#0E1020" stroke="#F5F7FF" stroke-opacity="0.06"/>
+  <text x="100" y="430" fill="#F5F7FF" font-family="'JetBrains Mono', monospace" font-size="12">Void/Base #06070F</text>
+  <text x="340" y="430" fill="#F5F7FF" font-family="'JetBrains Mono', monospace" font-size="12">Void/Deep #03040A</text>
+  <text x="580" y="430" fill="#F5F7FF" font-family="'JetBrains Mono', monospace" font-size="12">Void/Raised #0E1020</text>
+
+  <text x="820" y="320" fill="#9FA8C7" font-family="'JetBrains Mono', monospace" font-size="14">surface</text>
+  <rect x="820" y="340" width="220" height="120" rx="28" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <rect x="1060" y="340" width="220" height="120" rx="28" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <text x="840" y="430" fill="#F5F7FF" font-family="'JetBrains Mono', monospace" font-size="12">Glass/04</text>
+  <text x="1080" y="430" fill="#F5F7FF" font-family="'JetBrains Mono', monospace" font-size="12">GlassHi/08</text>
+
+  <text x="80" y="520" fill="#9FA8C7" font-family="'JetBrains Mono', monospace" font-size="14">aurora</text>
+  <rect x="80" y="540" width="220" height="120" rx="28" fill="#6EFFB7"/>
+  <rect x="320" y="540" width="220" height="120" rx="28" fill="#3FCC8A"/>
+  <rect x="560" y="540" width="220" height="120" rx="28" fill="#9B5CFF"/>
+  <rect x="800" y="540" width="220" height="120" rx="28" fill="#6F46CC"/>
+  <rect x="1040" y="540" width="220" height="120" rx="28" fill="#FF5BD6"/>
+  <text x="100" y="630" fill="#06070F" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">Green #6EFFB7</text>
+  <text x="340" y="630" fill="#06070F" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">GreenDim #3FCC8A</text>
+  <text x="580" y="630" fill="#FFFFFF" font-family="'JetBrains Mono', monospace" font-size="12">Violet #9B5CFF</text>
+  <text x="820" y="630" fill="#FFFFFF" font-family="'JetBrains Mono', monospace" font-size="12">VioletDim #6F46CC</text>
+  <text x="1060" y="630" fill="#06070F" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">Magenta #FF5BD6</text>
+
+  <text x="80" y="710" fill="#9FA8C7" font-family="'JetBrains Mono', monospace" font-size="14">signal</text>
+  <rect x="80" y="730" width="220" height="120" rx="28" fill="#FF6B6B"/>
+  <rect x="320" y="730" width="220" height="120" rx="28" fill="#FFC857"/>
+  <rect x="560" y="730" width="220" height="120" rx="28" fill="#7BFFCE"/>
+  <text x="100" y="820" fill="#06070F" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">Coral #FF6B6B</text>
+  <text x="340" y="820" fill="#06070F" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">Amber #FFC857</text>
+  <text x="580" y="820" fill="#06070F" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">Mint #7BFFCE</text>
+
+  <text x="80" y="900" fill="#9FA8C7" font-family="'JetBrains Mono', monospace" font-size="14">text</text>
+  <text x="80" y="950" fill="#F5F7FF" font-family="'Inter', sans-serif" font-weight="500" font-size="22">Primary #F5F7FF</text>
+  <text x="80" y="990" fill="#F5F7FF" fill-opacity="0.72" font-family="'Inter', sans-serif" font-size="22">Secondary 72%</text>
+  <text x="80" y="1030" fill="#F5F7FF" fill-opacity="0.48" font-family="'Inter', sans-serif" font-size="22">Tertiary 48%</text>
+  <text x="80" y="1070" fill="#9FA8C7" font-family="'JetBrains Mono', monospace" font-size="22">Mono #9FA8C7</text>
+
+  <text x="80" y="1180" fill="#F5F7FF" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="36" letter-spacing="-0.8">02 · Typography</text>
+
+  <text x="80" y="1260" fill="#F5F7FF" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="56" letter-spacing="-1.5">Display Hero</text>
+  <text x="80" y="1295" fill="#9FA8C7" font-family="'JetBrains Mono', monospace" font-size="12">Space Grotesk 700 · 56/60 · -1.5</text>
+
+  <text x="80" y="1380" fill="#F5F7FF" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="36" letter-spacing="-0.8">Display Title</text>
+  <text x="80" y="1410" fill="#9FA8C7" font-family="'JetBrains Mono', monospace" font-size="12">Space Grotesk 700 · 36/40 · -0.8</text>
+
+  <text x="80" y="1480" fill="#F5F7FF" font-family="'Inter', sans-serif" font-weight="500" font-size="22">Body Large · The quick brown fox</text>
+  <text x="80" y="1510" fill="#9FA8C7" font-family="'JetBrains Mono', monospace" font-size="12">Inter 500 · 22/30 · -0.2</text>
+
+  <text x="80" y="1570" fill="#F5F7FF" font-family="'Inter', sans-serif" font-weight="400" font-size="16">Body Medium · The quick brown fox jumps</text>
+  <text x="80" y="1595" fill="#9FA8C7" font-family="'JetBrains Mono', monospace" font-size="12">Inter 400 · 16/24 · 0</text>
+
+  <text x="80" y="1655" fill="#9FA8C7" font-family="'JetBrains Mono', monospace" font-size="14">mono.md · splats=1,247,392</text>
+  <text x="80" y="1680" fill="#9FA8C7" font-family="'JetBrains Mono', monospace" font-size="12">JetBrains Mono 400 · 14/20</text>
+
+  <text x="80" y="1740" fill="#F5F7FF" font-family="'Inter', sans-serif" font-weight="600" font-size="11" letter-spacing="1.4">OVERLINE · CAPS LOCK</text>
+  <text x="80" y="1765" fill="#9FA8C7" font-family="'JetBrains Mono', monospace" font-size="12">Inter 600 · 11/14 · +1.4 UPPER</text>
+
+  <text x="80" y="1860" fill="#F5F7FF" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="36" letter-spacing="-0.8">03 · Spacing</text>
+  <g font-family="'JetBrains Mono', monospace" font-size="12" fill="#9FA8C7">
+    <rect x="80" y="1900" width="2" height="20" fill="#6EFFB7"/><text x="100" y="1915">xxs 2</text>
+    <rect x="200" y="1900" width="4" height="20" fill="#6EFFB7"/><text x="220" y="1915">xs 4</text>
+    <rect x="320" y="1900" width="8" height="20" fill="#6EFFB7"/><text x="345" y="1915">s 8</text>
+    <rect x="440" y="1900" width="12" height="20" fill="#6EFFB7"/><text x="465" y="1915">m 12</text>
+    <rect x="560" y="1900" width="16" height="20" fill="#6EFFB7"/><text x="590" y="1915">l 16</text>
+    <rect x="680" y="1900" width="24" height="20" fill="#6EFFB7"/><text x="720" y="1915">xl 24</text>
+    <rect x="800" y="1900" width="32" height="20" fill="#6EFFB7"/><text x="850" y="1915">xxl 32</text>
+    <rect x="940" y="1900" width="48" height="20" fill="#6EFFB7"/><text x="1005" y="1915">xxxl 48</text>
+    <rect x="1080" y="1900" width="64" height="20" fill="#6EFFB7"/><text x="1160" y="1915">jumbo 64</text>
+  </g>
+
+  <text x="80" y="2010" fill="#F5F7FF" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="36" letter-spacing="-0.8">04 · Radius</text>
+  <rect x="80" y="2050" width="120" height="120" rx="8" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <rect x="220" y="2050" width="120" height="120" rx="16" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <rect x="360" y="2050" width="120" height="120" rx="28" fill="#FFFFFF" fill-opacity="0.04" stroke="#9B5CFF" stroke-opacity="0.6" stroke-width="2"/>
+  <rect x="500" y="2050" width="240" height="120" rx="999" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <text x="140" y="2200" fill="#9FA8C7" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">S 8</text>
+  <text x="280" y="2200" fill="#9FA8C7" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">M 16</text>
+  <text x="420" y="2200" fill="#9FA8C7" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">L 28 ★</text>
+  <text x="620" y="2200" fill="#9FA8C7" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">pill</text>
+
+  <text x="80" y="2280" fill="#F5F7FF" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="36" letter-spacing="-0.8">05 · Elevation (glass)</text>
+  <rect x="80" y="2330" width="280" height="60" rx="28" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <text x="220" y="2367" fill="#F5F7FF" font-family="'Inter', sans-serif" font-size="14" text-anchor="middle">L1 · glass · 24dp blur</text>
+  <rect x="400" y="2318" width="280" height="60" rx="28" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <text x="540" y="2355" fill="#F5F7FF" font-family="'Inter', sans-serif" font-size="14" text-anchor="middle">L2 · raised · 32dp</text>
+  <rect x="720" y="2300" width="280" height="80" rx="28" fill="#0E1020" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <text x="860" y="2347" fill="#F5F7FF" font-family="'Inter', sans-serif" font-size="14" text-anchor="middle">L3 · modal · 40dp</text>
+  <rect x="1040" y="2280" width="280" height="120" rx="28" fill="url(#fabGradient)"/>
+  <text x="1180" y="2347" fill="#06070F" font-family="'Inter', sans-serif" font-weight="700" font-size="14" text-anchor="middle">L4 · FAB · gradient</text>
+</svg>

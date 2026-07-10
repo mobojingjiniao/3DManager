@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 2400" width="1080" height="2400">
+  <defs>
+    <radialGradient id="meshAurora" cx="50%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#6EFFB7" stop-opacity="0.18"/>
+      <stop offset="60%" stop-color="#9B5CFF" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#06070F" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fabGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6EFFB7"/>
+      <stop offset="100%" stop-color="#9B5CFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="2400" fill="#06070F"/>
+  <rect width="1080" height="2400" fill="url(#meshAurora)"/>
+  <g fill="#6EFFB7" fill-opacity="0.35">
+    <circle cx="120" cy="800" r="3"/><circle cx="950" cy="1200" r="2"/>
+    <circle cx="80" cy="1600" r="3"/><circle cx="1000" cy="600" r="2"/>
+    <circle cx="200" cy="1900" r="3"/>
+  </g>
+  <g fill="#9B5CFF" fill-opacity="0.35">
+    <circle cx="900" cy="900" r="3"/><circle cx="160" cy="1300" r="2"/>
+    <circle cx="1020" cy="1700" r="3"/><circle cx="60" cy="400" r="2"/>
+  </g>
+  <text x="60" y="60" fill="#F5F7FF" font-family="Inter, sans-serif" font-weight="600" font-size="16">9:41</text>
+  <text x="60" y="180" fill="#F5F7FF" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="56" letter-spacing="-1.5">Avatars</text>
+  <text x="60" y="220" fill="#F5F7FF" fill-opacity="0.72" font-family="Inter, sans-serif" font-size="18">12 splats - 4 captured - 8 imported</text>
+  <g transform="translate(60, 290)">
+    <rect width="100" height="48" rx="999" fill="#6EFFB7"/>
+    <text x="50" y="32" fill="#06070F" font-family="Inter, sans-serif" font-weight="700" font-size="16" text-anchor="middle">All</text>
+    <rect x="120" y="0" width="160" height="48" rx="999" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+    <text x="200" y="32" fill="#F5F7FF" font-family="Inter, sans-serif" font-weight="500" font-size="16" text-anchor="middle">Captured</text>
+    <rect x="300" y="0" width="160" height="48" rx="999" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+    <text x="380" y="32" fill="#F5F7FF" font-family="Inter, sans-serif" font-weight="500" font-size="16" text-anchor="middle">Imported</text>
+    <rect x="480" y="0" width="120" height="48" rx="999" fill="#9B5CFF" fill-opacity="0.20" stroke="#9B5CFF" stroke-opacity="0.6"/>
+    <text x="540" y="32" fill="#9B5CFF" font-family="Inter, sans-serif" font-weight="600" font-size="16" text-anchor="middle">* Favs</text>
+  </g>
+  <g transform="translate(60, 380)">
+    <rect width="480" height="540" rx="28" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+    <rect x="20" y="20" width="440" height="340" rx="20" fill="#0E1020"/>
+    <g transform="translate(240, 190)" fill="#6EFFB7" fill-opacity="0.7">
+      <circle cx="-50" cy="-30" r="4"/><circle cx="-20" cy="-50" r="5"/>
+      <circle cx="20" cy="-40" r="4"/><circle cx="50" cy="-20" r="6"/>
+      <circle cx="60" cy="20" r="4"/><circle cx="20" cy="40" r="5"/>
+      <circle cx="-30" cy="50" r="4"/><circle cx="-60" cy="10" r="5"/>
+      <circle cx="0" cy="0" r="6"/>
+    </g>
+    <g transform="translate(240, 190)" fill="#9B5CFF" fill-opacity="0.7">
+      <circle cx="-30" cy="-10" r="4"/><circle cx="30" cy="-15" r="3"/>
+      <circle cx="-10" cy="30" r="4"/><circle cx="40" cy="30" r="3"/>
+    </g>
+    <text x="40" y="410" fill="#F5F7FF" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="28" letter-spacing="-0.4">Me</text>
+    <g transform="translate(40, 430)">
+      <rect width="120" height="28" rx="999" fill="#6EFFB7" fill-opacity="0.16"/>
+      <text x="60" y="20" fill="#6EFFB7" font-family="Inter, sans-serif" font-weight="600" font-size="12" text-anchor="middle" letter-spacing="0.4">CAPTURED</text>
+    </g>    <text x="40" y="500" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="14">1.2M splats - 12.4 MB</text>
+    <text x="40" y="525" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="14">2 days ago</text>
+  </g>
+  <g transform="translate(560, 380)">
+    <rect width="480" height="540" rx="28" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+    <rect x="20" y="20" width="440" height="340" rx="20" fill="#0E1020"/>
+    <g transform="translate(240, 190)" fill="#9B5CFF" fill-opacity="0.7">
+      <circle cx="-60" cy="0" r="4"/><circle cx="-30" cy="-30" r="5"/>
+      <circle cx="0" cy="-40" r="4"/><circle cx="40" cy="-20" r="5"/>
+      <circle cx="60" cy="20" r="4"/><circle cx="20" cy="40" r="5"/>
+      <circle cx="-40" cy="30" r="4"/><circle cx="0" cy="10" r="6"/>
+    </g>
+    <g transform="translate(240, 190)" fill="#6EFFB7" fill-opacity="0.7">
+      <circle cx="20" cy="0" r="4"/><circle cx="-20" cy="20" r="4"/>
+      <circle cx="50" cy="-50" r="3"/>
+    </g>
+    <text x="40" y="410" fill="#F5F7FF" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="28" letter-spacing="-0.4">Living Room</text>
+    <g transform="translate(40, 430)">
+      <rect width="120" height="28" rx="999" fill="#9B5CFF" fill-opacity="0.20"/>
+      <text x="60" y="20" fill="#9B5CFF" font-family="Inter, sans-serif" font-weight="600" font-size="12" text-anchor="middle" letter-spacing="0.4">IMPORTED</text>
+    </g>
+    <text x="40" y="500" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="14">800k splats - 8.2 MB</text>
+    <text x="40" y="525" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="14">1 week ago</text>
+  </g>
+  <g transform="translate(60, 960)">
+    <rect width="480" height="540" rx="28" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+    <rect x="20" y="20" width="440" height="340" rx="20" fill="#0E1020"/>
+    <g transform="translate(240, 190)" fill="#FF5BD6" fill-opacity="0.6">
+      <circle cx="-50" cy="-20" r="4"/><circle cx="30" cy="-30" r="5"/>
+      <circle cx="60" cy="20" r="4"/><circle cx="-20" cy="40" r="5"/>
+    </g>
+    <g transform="translate(240, 190)" fill="#6EFFB7" fill-opacity="0.6">
+      <circle cx="0" cy="0" r="6"/><circle cx="-30" cy="10" r="4"/>
+      <circle cx="40" cy="-10" r="4"/>
+    </g>
+    <text x="40" y="410" fill="#F5F7FF" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="28" letter-spacing="-0.4">Studio</text>
+    <g transform="translate(40, 430)">
+      <rect width="120" height="28" rx="999" fill="#6EFFB7" fill-opacity="0.16"/>
+      <text x="60" y="20" fill="#6EFFB7" font-family="Inter, sans-serif" font-weight="600" font-size="12" text-anchor="middle" letter-spacing="0.4">CAPTURED</text>
+    </g>
+    <text x="40" y="500" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="14">920k splats - 9.6 MB</text>
+    <text x="40" y="525" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="14">3 days ago</text>
+  </g>
+  <g transform="translate(560, 960)">
+    <rect width="480" height="540" rx="28" fill="none" stroke="#9B5CFF" stroke-opacity="0.4" stroke-dasharray="8 6" stroke-width="2"/>
+    <g transform="translate(240, 230)" fill="none" stroke="#9B5CFF" stroke-width="3">
+      <circle r="32"/>
+      <line x1="-16" y1="0" x2="16" y2="0"/>
+      <line x1="0" y1="-16" x2="0" y2="16"/>
+    </g>
+    <text x="240" y="370" fill="#F5F7FF" font-family="Space Grotesk, sans-serif" font-weight="600" font-size="24" text-anchor="middle">Import avatar</text>
+    <text x="240" y="405" fill="#F5F7FF" fill-opacity="0.48" font-family="Inter, sans-serif" font-size="16" text-anchor="middle">.ply - .splat - .ksplat - .spz - .glb</text>
+  </g>
+  <g transform="translate(540, 2200)">
+    <circle r="56" fill="url(#fabGradient)"/>
+    <circle r="64" fill="none" stroke="#9B5CFF" stroke-opacity="0.3" stroke-width="4"/>
+    <circle r="14" fill="#06070F"/>
+    <circle r="6" fill="#6EFFB7"/>
+  </g>
+  <rect x="0" y="2160" width="1080" height="240" fill="#03040A"/>
+  <line x1="0" y1="2160" x2="1080" y2="2160" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <g font-family="Inter, sans-serif" font-size="14">
+    <g transform="translate(140, 2230)">
+      <circle cx="0" cy="-10" r="20" fill="#6EFFB7" fill-opacity="0.12"/>
+      <g fill="#6EFFB7" transform="translate(0,-10)">
+        <circle cx="-10" cy="-8" r="4"/><circle cx="8" cy="-4" r="5"/>
+        <circle cx="-4" cy="6" r="3"/><circle cx="12" cy="10" r="4"/>
+      </g>
+      <text x="0" y="40" fill="#6EFFB7" font-weight="600" text-anchor="middle">Avatars</text>
+    </g>
+    <g transform="translate(380, 2230)" fill="#F5F7FF" fill-opacity="0.6">
+      <circle cx="0" cy="-10" r="14" fill="none" stroke="#F5F7FF" stroke-opacity="0.6" stroke-width="2"/>
+      <path d="M -8 -14 L 8 -14 L 4 -6 L 8 -6 L -2 4 L 2 -6 L -8 -6 Z" fill="#F5F7FF" fill-opacity="0.6"/>
+      <text x="0" y="40" text-anchor="middle" font-weight="500">Themes</text>
+    </g>
+    <g transform="translate(860, 2230)" fill="#F5F7FF" fill-opacity="0.6">
+      <rect x="-12" y="-20" width="24" height="16" rx="2" fill="none" stroke="#F5F7FF" stroke-opacity="0.6" stroke-width="2"/>
+      <circle cx="0" cy="-10" r="3" fill="#F5F7FF" fill-opacity="0.6"/>
+      <text x="0" y="40" text-anchor="middle" font-weight="500">Wallpaper</text>
+    </g>
+    <g transform="translate(980, 2230)" fill="#F5F7FF" fill-opacity="0.6">
+      <g transform="translate(0,-10)" stroke="#F5F7FF" stroke-opacity="0.6" stroke-width="2" fill="none">
+        <circle r="6"/>
+        <line x1="0" y1="-14" x2="0" y2="-10"/>
+        <line x1="0" y1="10" x2="0" y2="14"/>
+        <line x1="-14" y1="0" x2="-10" y2="0"/>
+        <line x1="10" y1="0" x2="14" y2="0"/>
+      </g>
+      <text x="0" y="40" text-anchor="middle" font-weight="500">Settings</text>
+    </g>
+  </g>
+</svg>

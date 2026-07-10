@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="auroraGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6EFFB7"/>
+      <stop offset="100%" stop-color="#9B5CFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="#06070F"/>
+  <text x="40" y="60" fill="#F5F7FF" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="32">AuroraCard states</text>
+  <text x="40" y="100" fill="#9FA8C7" font-family="Inter, sans-serif" font-weight="500" font-size="16">L1 default / L2 raised / L3 modal / Error / Selected</text>
+  <g transform="translate(40, 160)">
+    <rect width="260" height="280" rx="28" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+    <text x="20" y="40" fill="#F5F7FF" font-family="Inter, sans-serif" font-weight="600" font-size="16">L1 - Default</text>
+    <text x="20" y="80" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="13">fill: 04</text>
+    <text x="20" y="105" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="13">stroke: 06</text>
+    <text x="20" y="130" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="13">blur: 24dp</text>
+    <text x="20" y="155" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="13">y-offset: 0</text>
+  </g>
+  <g transform="translate(320, 160)">
+    <rect width="260" height="280" rx="28" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.10"/>
+    <text x="20" y="40" fill="#F5F7FF" font-family="Inter, sans-serif" font-weight="600" font-size="16">L2 - Raised (hover)</text>
+    <text x="20" y="80" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="13">fill: 08</text>
+    <text x="20" y="105" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="13">stroke: 10</text>
+    <text x="20" y="130" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="13">blur: 32dp</text>
+    <text x="20" y="155" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="13">y-offset: -2</text>
+  </g>
+  <g transform="translate(600, 160)">
+    <rect width="260" height="280" rx="28" fill="#0E1020" stroke="#FFFFFF" stroke-opacity="0.10"/>
+    <text x="20" y="40" fill="#F5F7FF" font-family="Inter, sans-serif" font-weight="600" font-size="16">L3 - Modal</text>
+    <text x="20" y="80" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="13">fill: Void/Raised</text>
+    <text x="20" y="105" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="13">stroke: 10</text>
+    <text x="20" y="130" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="13">blur: 40dp</text>
+    <text x="20" y="155" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="13">y-offset: -8</text>
+  </g>
+  <g transform="translate(880, 160)">
+    <rect width="260" height="280" rx="28" fill="#FF6B6B" fill-opacity="0.08" stroke="#FF6B6B" stroke-width="1.5"/>
+    <text x="20" y="40" fill="#FF6B6B" font-family="Inter, sans-serif" font-weight="600" font-size="16">Error</text>
+    <text x="20" y="80" fill="#F5F7FF" fill-opacity="0.72" font-family="Inter, sans-serif" font-size="14">Asset not found</text>
+    <text x="20" y="110" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="12">ERR_ASSET_404</text>
+  </g>
+  <g transform="translate(40, 480)">
+    <rect width="260" height="280" rx="28" fill="#9B5CFF" fill-opacity="0.16" stroke="#9B5CFF" stroke-width="2"/>
+    <text x="20" y="40" fill="#9B5CFF" font-family="Inter, sans-serif" font-weight="700" font-size="16">Selected</text>
+    <text x="20" y="80" fill="#F5F7FF" font-family="Inter, sans-serif" font-size="14">Tap to deselect</text>
+    <g transform="translate(220, 50)">
+      <circle r="14" fill="#9B5CFF"/>
+      <path d="M -6 0 L -2 4 L 6 -4" stroke="#06070F" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    </g>
+  </g>
+  <g transform="translate(320, 480)">
+    <rect width="260" height="280" rx="28" fill="url(#auroraGrad)"/>
+    <text x="20" y="40" fill="#06070F" font-family="Inter, sans-serif" font-weight="700" font-size="16">L4 - Hero</text>
+    <text x="20" y="80" fill="#06070F" fill-opacity="0.72" font-family="Inter, sans-serif" font-size="14">gradient surface</text>
+  </g>
+  <g transform="translate(600, 480)">
+    <rect width="540" height="280" rx="28" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+    <text x="20" y="40" fill="#F5F7FF" font-family="Inter, sans-serif" font-weight="600" font-size="16">Wide card</text>
+    <text x="20" y="80" fill="#9FA8C7" font-family="Inter, sans-serif" font-size="14">Used for hero banners, stat panels, large CTAs</text>
+    <text x="20" y="120" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="13">width: 540 - radius: 28 - padding: 24</text>
+  </g>
+</svg>

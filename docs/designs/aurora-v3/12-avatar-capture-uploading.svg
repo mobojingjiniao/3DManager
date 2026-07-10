@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 2400" width="1080" height="2400">
+  <defs>
+    <radialGradient id="meshAurora" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#6EFFB7" stop-opacity="0.30"/>
+      <stop offset="50%" stop-color="#9B5CFF" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#06070F" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06070F"/>
+      <stop offset="50%" stop-color="#6EFFB7" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#06070F"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="2400" fill="#06070F"/>
+  <rect width="1080" height="2400" fill="url(#meshAurora)"/>
+  <text x="60" y="130" fill="#F5F7FF" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="36" letter-spacing="-0.8">Uploading to FormScan</text>
+  <text x="60" y="170" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="14">job_id=fsk_8a2b9c1d - chunked</text>
+  <rect x="60" y="1000" width="960" height="400" rx="28" fill="#0E1020" stroke="#FFFFFF" stroke-opacity="0.10"/>
+  <rect x="60" y="1000" width="960" height="400" rx="28" fill="url(#sweep)"/>
+  <text x="540" y="1180" fill="#F5F7FF" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="36" text-anchor="middle">Sending 247 MB...</text>
+  <text x="540" y="1240" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="16" text-anchor="middle">62% - 13.4 MB/s - ETA 11s</text>
+  <g transform="translate(540, 1320)">
+    <rect x="-300" width="600" height="8" rx="4" fill="#FFFFFF" fill-opacity="0.08"/>
+    <rect x="-300" width="372" height="8" rx="4" fill="#6EFFB7"/>
+  </g>
+  <g transform="translate(440, 1800)">
+    <rect width="200" height="64" rx="32" fill="#FFFFFF" fill-opacity="0.04" stroke="#FF6B6B" stroke-opacity="0.6"/>
+    <text x="100" y="42" fill="#FF6B6B" font-family="Inter, sans-serif" font-weight="700" font-size="18" text-anchor="middle">Cancel</text>
+  </g>
+</svg>

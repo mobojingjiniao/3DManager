@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 2400" width="1080" height="2400">
+  <defs>
+    <radialGradient id="meshAurora" cx="50%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#9B5CFF" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#06070F" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1080" height="2400" fill="#06070F"/>
+  <rect width="1080" height="2400" fill="url(#meshAurora)"/>
+  <text x="60" y="180" fill="#F5F7FF" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="48" letter-spacing="-0.8">Share avatar</text>
+  <rect x="240" y="320" width="600" height="600" rx="28" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <g transform="translate(290, 370)" fill="#F5F7FF">
+    <rect width="120" height="120" fill="#F5F7FF"/>
+    <rect x="20" y="20" width="80" height="80" fill="#06070F"/>
+    <rect x="40" y="40" width="40" height="40" fill="#F5F7FF"/>
+    <rect x="380" width="120" height="120" fill="#F5F7FF"/>
+    <rect x="400" y="20" width="80" height="80" fill="#06070F"/>
+    <rect x="420" y="40" width="40" height="40" fill="#F5F7FF"/>
+    <rect y="380" width="120" height="120" fill="#F5F7FF"/>
+    <rect x="20" y="400" width="80" height="80" fill="#06070F"/>
+    <rect x="40" y="420" width="40" height="40" fill="#F5F7FF"/>
+    <g>
+      <rect x="160" y="40" width="20" height="20"/>
+      <rect x="200" y="80" width="20" height="20"/>
+      <rect x="240" y="40" width="20" height="20"/>
+      <rect x="280" y="100" width="20" height="20"/>
+      <rect x="160" y="160" width="20" height="20"/>
+      <rect x="220" y="200" width="20" height="20"/>
+      <rect x="280" y="180" width="20" height="20"/>
+      <rect x="340" y="220" width="20" height="20"/>
+      <rect x="60" y="240" width="20" height="20"/>
+      <rect x="160" y="280" width="20" height="20"/>
+      <rect x="220" y="320" width="20" height="20"/>
+      <rect x="340" y="360" width="20" height="20"/>
+      <rect x="380" y="280" width="20" height="20"/>
+      <rect x="60" y="160" width="20" height="20"/>
+    </g>
+  </g>
+  <text x="540" y="980" fill="#F5F7FF" font-family="JetBrains Mono, monospace" font-size="20" text-anchor="middle">porin.app/a/abc123</text>
+  <g transform="translate(60, 1080)">
+    <rect width="480" height="72" rx="36" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.12"/>
+    <text x="240" y="46" fill="#F5F7FF" font-family="Inter, sans-serif" font-weight="700" font-size="18" text-anchor="middle">Copy link</text>
+  </g>
+  <g transform="translate(560, 1080)">
+    <rect width="460" height="72" rx="36" fill="#6EFFB7"/>
+    <text x="230" y="46" fill="#06070F" font-family="Inter, sans-serif" font-weight="700" font-size="18" text-anchor="middle">System share</text>
+  </g>
+  <text x="60" y="1240" fill="#F5F7FF" fill-opacity="0.48" font-family="Inter, sans-serif" font-weight="600" font-size="11" letter-spacing="1.4">VISIBILITY</text>
+  <g transform="translate(60, 1280)">
+    <rect width="480" height="80" rx="20" fill="#6EFFB7" fill-opacity="0.12" stroke="#6EFFB7" stroke-width="2"/>
+    <circle cx="40" cy="40" r="14" fill="#6EFFB7"/>
+    <circle cx="40" cy="40" r="6" fill="#06070F"/>
+    <text x="80" y="48" fill="#F5F7FF" font-family="Inter, sans-serif" font-weight="600" font-size="20">Public</text>
+  </g>
+  <g transform="translate(560, 1280)">
+    <rect width="460" height="80" rx="20" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+    <circle cx="40" cy="40" r="14" fill="none" stroke="#F5F7FF" stroke-opacity="0.48" stroke-width="2"/>
+    <text x="80" y="48" fill="#F5F7FF" fill-opacity="0.72" font-family="Inter, sans-serif" font-weight="500" font-size="20">Unlisted</text>
+  </g>
+  <text x="60" y="1460" fill="#F5F7FF" fill-opacity="0.48" font-family="Inter, sans-serif" font-weight="600" font-size="11" letter-spacing="1.4">STATS</text>
+  <rect x="60" y="1490" width="960" height="120" rx="20" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <g transform="translate(120, 1560)">
+    <text fill="#6EFFB7" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="36">24</text>
+    <text y="30" fill="#F5F7FF" fill-opacity="0.48" font-family="Inter, sans-serif" font-size="14">views</text>
+  </g>
+  <g transform="translate(380, 1560)">
+    <text fill="#9B5CFF" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="36">3</text>
+    <text y="30" fill="#F5F7FF" fill-opacity="0.48" font-family="Inter, sans-serif" font-size="14">likes</text>
+  </g>
+  <g transform="translate(640, 1560)">
+    <text fill="#F5F7FF" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="36">1</text>
+    <text y="30" fill="#F5F7FF" fill-opacity="0.48" font-family="Inter, sans-serif" font-size="14">remix</text>
+  </g>
+</svg>

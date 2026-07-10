@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 2400" width="1080" height="2400">
+  <defs>
+    <radialGradient id="meshAurora" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#6EFFB7" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#06070F" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1080" height="2400" fill="#06070F"/>
+  <rect width="1080" height="2400" fill="url(#meshAurora)"/>
+  <g transform="translate(60, 130)" stroke="#F5F7FF" stroke-width="2.5" fill="none">
+    <line x1="0" y1="0" x2="28" y2="28"/>
+    <line x1="28" y1="0" x2="0" y2="28"/>
+  </g>
+  <g transform="translate(990, 130)" fill="none" stroke="#F5F7FF" stroke-width="2">
+    <circle cx="14" cy="14" r="12"/>
+    <line x1="14" y1="6" x2="14" y2="14"/>
+    <line x1="14" y1="14" x2="20" y2="14"/>
+  </g>
+  <rect x="60" y="280" width="960" height="1100" rx="28" fill="#0E1020" stroke="#FFFFFF" stroke-opacity="0.10"/>
+  <circle cx="540" cy="780" r="200" fill="none" stroke="#6EFFB7" stroke-width="2" stroke-opacity="0.7" stroke-dasharray="6 4"/>
+  <circle cx="540" cy="780" r="6" fill="#6EFFB7"/>
+  <g stroke="#6EFFB7" stroke-width="3" fill="none">
+    <polyline points="120,360 80,360 80,400"/>
+    <polyline points="960,360 1000,360 1000,400"/>
+    <polyline points="120,1300 80,1300 80,1260"/>
+    <polyline points="960,1300 1000,1300 1000,1260"/>
+  </g>
+  <g transform="translate(540, 1480)">
+    <circle r="8" fill="#FF6B6B"/>
+    <text x="22" y="6" fill="#FF6B6B" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700">REC - 00:14</text>
+  </g>
+  <text x="540" y="1580" fill="#F5F7FF" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="36" text-anchor="middle" letter-spacing="-0.8">12 / 24 frames - 50%</text>
+  <text x="540" y="1620" fill="#F5F7FF" fill-opacity="0.72" font-family="Inter, sans-serif" font-size="20" text-anchor="middle">Slowly orbit around the subject.</text>
+  <g transform="translate(540, 1730)">
+    <circle r="56" fill="none" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="6"/>
+    <circle r="56" fill="none" stroke="#6EFFB7" stroke-width="6" stroke-dasharray="176 352" stroke-linecap="round" transform="rotate(-90)"/>
+  </g>
+  <g transform="translate(540, 1900)">
+    <circle r="56" fill="none" stroke="#F5F7FF" stroke-width="4"/>
+    <circle r="40" fill="#FF6B6B"/>
+  </g>
+  <text x="540" y="2020" fill="#9FA8C7" font-family="Inter, sans-serif" font-size="16" text-anchor="middle">Keep 1.5m distance - Good lighting - Steady hands</text>
+</svg>

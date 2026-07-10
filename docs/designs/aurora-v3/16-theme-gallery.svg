@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 2400" width="1080" height="2400">
+  <defs>
+    <radialGradient id="meshAurora" cx="50%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#6EFFB7" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#06070F" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="auroraGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6EFFB7"/>
+      <stop offset="100%" stop-color="#9B5CFF"/>
+    </linearGradient>
+    <linearGradient id="midnightGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1A1C2E"/>
+      <stop offset="100%" stop-color="#06070F"/>
+    </linearGradient>
+    <linearGradient id="forestGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#34C759"/>
+      <stop offset="100%" stop-color="#1F4A2E"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="2400" fill="#06070F"/>
+  <rect width="1080" height="2400" fill="url(#meshAurora)"/>
+  <text x="60" y="180" fill="#F5F7FF" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="56" letter-spacing="-1.5">Themes</text>
+  <text x="60" y="280" fill="#F5F7FF" fill-opacity="0.48" font-family="Inter, sans-serif" font-weight="600" font-size="11" letter-spacing="1.4">CURRENT</text>
+  <g transform="translate(60, 310)">
+    <rect width="960" height="320" rx="28" fill="url(#auroraGrad)"/>
+    <g transform="translate(120, 160)" fill="#FFFFFF">
+      <circle r="80" fill="none" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="2"/>
+      <circle r="50" fill="#FFFFFF" fill-opacity="0.3"/>
+      <circle r="20" fill="#FFFFFF"/>
+    </g>
+    <text x="280" y="160" fill="#06070F" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="40" letter-spacing="-0.8">Aurora</text>
+    <text x="280" y="200" fill="#06070F" fill-opacity="0.72" font-family="Inter, sans-serif" font-size="18">Green - Violet - Void</text>
+    <g transform="translate(800, 130)">
+      <rect width="120" height="40" rx="999" fill="#06070F"/>
+      <text x="60" y="26" fill="#6EFFB7" font-family="Inter, sans-serif" font-weight="700" font-size="14" text-anchor="middle">APPLIED</text>
+    </g>
+  </g>
+  <text x="60" y="720" fill="#F5F7FF" fill-opacity="0.48" font-family="Inter, sans-serif" font-weight="600" font-size="11" letter-spacing="1.4">AVAILABLE</text>
+  <g transform="translate(60, 760)">
+    <g>
+      <rect width="200" height="240" rx="24" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+      <rect x="20" y="20" width="160" height="120" rx="16" fill="#101112"/>
+      <text x="100" y="170" fill="#F5F7FF" font-family="Inter, sans-serif" font-weight="600" font-size="16" text-anchor="middle">Default</text>
+      <text x="100" y="195" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">M3 - baseline</text>
+    </g>
+    <g transform="translate(220, 0)">
+      <rect width="200" height="240" rx="24" fill="url(#midnightGrad)"/>
+      <text x="100" y="170" fill="#F5F7FF" font-family="Inter, sans-serif" font-weight="600" font-size="16" text-anchor="middle">Midnight</text>
+      <text x="100" y="195" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">deep + cool</text>
+    </g>
+    <g transform="translate(440, 0)">
+      <rect width="200" height="240" rx="24" fill="url(#auroraGrad)"/>
+      <rect width="200" height="240" rx="24" fill="none" stroke="#6EFFB7" stroke-width="2"/>
+      <text x="100" y="170" fill="#06070F" font-family="Inter, sans-serif" font-weight="700" font-size="16" text-anchor="middle">Aurora *</text>
+      <text x="100" y="195" fill="#06070F" fill-opacity="0.72" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">current</text>
+    </g>
+    <g transform="translate(660, 0)">
+      <rect width="200" height="240" rx="24" fill="url(#forestGrad)"/>
+      <text x="100" y="170" fill="#F5F7FF" font-family="Inter, sans-serif" font-weight="600" font-size="16" text-anchor="middle">Forest</text>
+      <text x="100" y="195" fill="#FFFFFF" fill-opacity="0.6" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">green + earth</text>
+    </g>
+  </g>
+  <text x="60" y="1100" fill="#F5F7FF" fill-opacity="0.48" font-family="Inter, sans-serif" font-weight="600" font-size="11" letter-spacing="1.4">RENDER TIER</text>
+  <rect x="60" y="1130" width="960" height="180" rx="20" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <g transform="translate(120, 1180)">
+    <rect width="80" height="32" rx="16" fill="#6EFFB7" fill-opacity="0.20"/>
+    <text x="40" y="22" fill="#6EFFB7" font-family="JetBrains Mono, monospace" font-weight="700" font-size="14" text-anchor="middle">HIGH</text>
+  </g>
+  <text x="220" y="1202" fill="#F5F7FF" font-family="JetBrains Mono, monospace" font-size="18">60 fps - 1.2M splats</text>
+  <text x="120" y="1250" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="14">Memory ~210 MB - Web Spark</text>
+  <text x="120" y="1280" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="14">Battery: nominal - Thermal: cool</text>
+  <g transform="translate(60, 1370)">
+    <rect width="460" height="72" rx="36" fill="#6EFFB7"/>
+    <text x="230" y="46" fill="#06070F" font-family="Inter, sans-serif" font-weight="700" font-size="18" text-anchor="middle">Apply</text>
+  </g>
+  <g transform="translate(560, 1370)">
+    <rect width="460" height="72" rx="36" fill="#FFFFFF" fill-opacity="0.04" stroke="#9B5CFF" stroke-opacity="0.6" stroke-width="1.5"/>
+    <text x="230" y="46" fill="#9B5CFF" font-family="Inter, sans-serif" font-weight="700" font-size="18" text-anchor="middle">Preview 30s</text>
+  </g>
+</svg>
