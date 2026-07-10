@@ -9,6 +9,15 @@
       <stop offset="0%" stop-color="#6EFFB7"/>
       <stop offset="100%" stop-color="#9B5CFF"/>
     </linearGradient>
+    <radialGradient id="mapBg" cx="50%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#1A2438"/>
+      <stop offset="100%" stop-color="#08111E"/>
+    </radialGradient>
+    <filter id="topo">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" seed="42"/>
+      <feColorMatrix values="0 0 0 0 0.1   0 0 0 0 0.18   0 0 0 0 0.28   0 0 0 0.3 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
   </defs>
   <rect width="1080" height="2400" fill="#06070F"/>
   <rect width="1080" height="2400" fill="url(#bg)"/>
@@ -23,7 +32,7 @@
     <circle cx="14" cy="0" r="3"/>
     <circle cx="28" cy="0" r="3"/>
   </g>
-  <rect x="40" y="200" width="1000" height="1180" rx="28" fill="#0E1020" stroke="#F4EDE4" stroke-opacity="0.08"/>
+  <rect x="40" y="200" width="1000" height="1080" rx="28" fill="#0E1020" stroke="#F4EDE4" stroke-opacity="0.08"/>
   <g transform="translate(534,1000)" fill="#9B5CFF" fill-opacity="0.5">
     <circle cx="36.9" cy="-267.7" r="4.70"/>
     <circle cx="17.6" cy="-248.7" r="2.51"/>
@@ -5090,141 +5099,168 @@
       <text x="28" y="13" fill="#6EFFB7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="1">HIGH</text>
     </g>
   </g>
-  <g transform="translate(540, 1310)">
-    <g transform="translate(-160, 0)">
-      <circle r="36" fill="#03040A" fill-opacity="0.7" stroke="#F4EDE4" stroke-opacity="0.2"/>
-      <path d="M 0 -28 L 8 0 L 0 28 L -8 0 Z" fill="#6EFFB7"/>
-      <text y="-46" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="10" text-anchor="middle" letter-spacing="2">ORBIT</text>
+  <text x="40" y="1330" fill="#F4EDE4" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="40" letter-spacing="-0.8">Me</text>
+  <g transform="translate(40, 1350)">
+    <rect width="120" height="30" rx="15" fill="#6EFFB7" fill-opacity="0.16" stroke="#6EFFB7" stroke-opacity="0.5"/>
+    <circle cx="14" cy="15" r="4" fill="#6EFFB7"/>
+    <text x="70" y="20" fill="#6EFFB7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="2">CAPTURED</text>
   </g>
-    <g transform="translate(-50, 0)">
-      <circle r="28" fill="#03040A" fill-opacity="0.7" stroke="#F4EDE4" stroke-opacity="0.2"/>
-      <g stroke="#F4EDE4" stroke-width="2" fill="none" stroke-linecap="round">
-        <path d="M -10 -4 A 10 10 0 1 1 -10 4"/>
-        <polyline points="-14,-8 -10,-4 -6,-8"/>
-      </g>
+  <g transform="translate(170, 1350)">
+    <rect width="100" height="30" rx="15" fill="#9B5CFF" fill-opacity="0.16" stroke="#9B5CFF" stroke-opacity="0.5"/>
+    <text x="50" y="20" fill="#9B5CFF" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="2">KSPLAT</text>
   </g>
-    <g transform="translate(50, 0)">
-      <circle r="28" fill="#03040A" fill-opacity="0.7" stroke="#F4EDE4" stroke-opacity="0.2"/>
-      <line x1="-8" y1="0" x2="8" y2="0" stroke="#F4EDE4" stroke-width="2.5" stroke-linecap="round"/>
+  <g transform="translate(280, 1350)">
+    <rect width="160" height="30" rx="15" fill="#FFFFFF" fill-opacity="0.04" stroke="#6EFFB7" stroke-opacity="0.6"/>
+    <g transform="translate(14, 15)">
+      <path d="M 0 -8 L 6 -3 L 6 3 L 0 8 L -6 3 L -6 -3 Z" fill="none" stroke="#6EFFB7" stroke-width="1.2"/>
+      <circle cx="0" cy="-2" r="2" fill="#6EFFB7"/>
+    </g>
+    <text x="86" y="20" fill="#6EFFB7" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1">TOKYO, JP</text>
   </g>
-    <g transform="translate(160, 0)">
-      <circle r="36" fill="#03040A" fill-opacity="0.7" stroke="#F4EDE4" stroke-opacity="0.2"/>
-      <line x1="-10" y1="0" x2="10" y2="0" stroke="#6EFFB7" stroke-width="2.5" stroke-linecap="round"/>
-      <line x1="0" y1="-10" x2="0" y2="10" stroke="#6EFFB7" stroke-width="2.5" stroke-linecap="round"/>
-      <text y="-46" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="10" text-anchor="middle" letter-spacing="2">ZOOM</text>
+  <text x="40" y="1412" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="14" letter-spacing="1">35.6762° N  ·  139.6503° E  ·  ±4m</text>
+  <text x="40" y="1438" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="14" letter-spacing="1">2026.07.04 · PIXEL 8 PRO · 1.7m</text>
+  <text x="40" y="1458" fill="#9FA8C7" font-family="Inter, sans-serif" font-weight="600" font-size="12" letter-spacing="3">CAPTURED HERE</text>
+  <rect x="40" y="1470" width="1000" height="280" rx="20" fill="url(#mapBg)"/>
+  <rect x="40" y="1470" width="1000" height="280" rx="20" fill="url(#topo)" opacity="0.5"/>
+  <line x1="40" y1="1540" x2="1040" y2="1540" stroke="#F4EDE4" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="40" y1="1610" x2="1040" y2="1610" stroke="#F4EDE4" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="40" y1="1680" x2="1040" y2="1680" stroke="#F4EDE4" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="240" y1="1470" x2="240" y2="1750" stroke="#F4EDE4" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="440" y1="1470" x2="440" y2="1750" stroke="#F4EDE4" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="640" y1="1470" x2="640" y2="1750" stroke="#F4EDE4" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="840" y1="1470" x2="840" y2="1750" stroke="#F4EDE4" stroke-opacity="0.04" stroke-width="1"/>
+  <circle cx="200" cy="1530" r="12" fill="#0A1428" stroke="#9B5CFF" stroke-width="2"/>
+  <circle cx="200" cy="1530" r="3" fill="#9B5CFF"/>
+  <circle cx="760" cy="1560" r="12" fill="#0A1428" stroke="#FFB347" stroke-width="2"/>
+  <circle cx="760" cy="1560" r="3" fill="#FFB347"/>
+  <circle cx="880" cy="1670" r="12" fill="#0A1428" stroke="#7BFFCE" stroke-width="2"/>
+  <circle cx="880" cy="1670" r="3" fill="#7BFFCE"/>
+  <path d="M 540 1610 Q 440 1550 200 1530" fill="none" stroke="#6EFFB7" stroke-width="1.5" stroke-opacity="0.4" stroke-dasharray="3 3"/>
+  <path d="M 540 1610 Q 640 1600 760 1560" fill="none" stroke="#6EFFB7" stroke-width="1.5" stroke-opacity="0.4" stroke-dasharray="3 3"/>
+  <path d="M 540 1610 Q 690 1640 880 1670" fill="none" stroke="#6EFFB7" stroke-width="1.5" stroke-opacity="0.4" stroke-dasharray="3 3"/>
+  <circle cx="540" cy="1610" r="60" fill="#6EFFB7" fill-opacity="0.2"/>
+  <circle cx="540" cy="1610" r="40" fill="none" stroke="#6EFFB7" stroke-width="1" stroke-opacity="0.6" stroke-dasharray="3 3"/>
+  <circle cx="540" cy="1610" r="24" fill="#0A1428" stroke="#6EFFB7" stroke-width="3"/>
+  <g fill="#6EFFB7" fill-opacity="0.5">
+    <circle cx="539.9" cy="1591.9" r="0.97"/>
+    <circle cx="540.9" cy="1597.2" r="1.21"/>
+    <circle cx="540.5" cy="1591.6" r="1.05"/>
+    <circle cx="541.5" cy="1592.3" r="1.10"/>
+    <circle cx="541.4" cy="1592.2" r="1.19"/>
+    <circle cx="538.5" cy="1591.6" r="1.15"/>
+    <circle cx="540.0" cy="1592.0" r="1.28"/>
+    <circle cx="539.2" cy="1589.7" r="0.89"/>
+    <circle cx="537.4" cy="1612.5" r="0.75"/>
+    <circle cx="545.6" cy="1590.8" r="1.00"/>
+    <circle cx="543.7" cy="1608.7" r="0.97"/>
+    <circle cx="538.0" cy="1612.9" r="0.98"/>
+    <circle cx="541.9" cy="1609.3" r="1.13"/>
+    <circle cx="542.2" cy="1602.9" r="0.72"/>
+    <circle cx="536.6" cy="1594.1" r="0.74"/>
+    <circle cx="533.5" cy="1594.3" r="0.84"/>
+    <circle cx="538.5" cy="1604.4" r="0.89"/>
+    <circle cx="536.2" cy="1593.7" r="1.17"/>
+    <circle cx="541.2" cy="1604.7" r="0.79"/>
+    <circle cx="536.4" cy="1606.8" r="0.89"/>
+    <circle cx="542.3" cy="1613.3" r="0.98"/>
+    <circle cx="543.7" cy="1605.7" r="1.09"/>
+    <circle cx="532.4" cy="1594.2" r="0.86"/>
+    <circle cx="536.9" cy="1595.1" r="1.17"/>
+    <circle cx="537.0" cy="1610.5" r="1.03"/>
+    <circle cx="544.5" cy="1598.4" r="0.93"/>
   </g>
+  <g fill="#6EFFB7" fill-opacity="0.95">
+    <circle cx="539.9" cy="1591.9" r="0.97"/>
+    <circle cx="540.9" cy="1597.2" r="1.21"/>
+    <circle cx="540.5" cy="1591.6" r="1.05"/>
+    <circle cx="541.5" cy="1592.3" r="1.10"/>
+    <circle cx="541.4" cy="1592.2" r="1.19"/>
+    <circle cx="538.5" cy="1591.6" r="1.15"/>
+    <circle cx="540.0" cy="1592.0" r="1.28"/>
+    <circle cx="539.2" cy="1589.7" r="0.89"/>
+    <circle cx="537.4" cy="1612.5" r="0.75"/>
+    <circle cx="545.6" cy="1590.8" r="1.00"/>
+    <circle cx="543.7" cy="1608.7" r="0.97"/>
+    <circle cx="538.0" cy="1612.9" r="0.98"/>
+    <circle cx="541.9" cy="1609.3" r="1.13"/>
+    <circle cx="542.2" cy="1602.9" r="0.72"/>
+    <circle cx="536.6" cy="1594.1" r="0.74"/>
+    <circle cx="533.5" cy="1594.3" r="0.84"/>
+    <circle cx="538.5" cy="1604.4" r="0.89"/>
+    <circle cx="536.2" cy="1593.7" r="1.17"/>
+    <circle cx="541.2" cy="1604.7" r="0.79"/>
+    <circle cx="536.4" cy="1606.8" r="0.89"/>
+    <circle cx="542.3" cy="1613.3" r="0.98"/>
+    <circle cx="543.7" cy="1605.7" r="1.09"/>
+    <circle cx="532.4" cy="1594.2" r="0.86"/>
+    <circle cx="536.9" cy="1595.1" r="1.17"/>
+    <circle cx="537.0" cy="1610.5" r="1.03"/>
+    <circle cx="544.5" cy="1598.4" r="0.93"/>
   </g>
-  <text x="40" y="1450" fill="#F4EDE4" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="48" letter-spacing="-1">Me</text>
-  <g transform="translate(40, 1480)">
-    <rect width="130" height="32" rx="16" fill="#6EFFB7" fill-opacity="0.16" stroke="#6EFFB7" stroke-opacity="0.5"/>
-    <circle cx="14" cy="16" r="4" fill="#6EFFB7"/>
-    <text x="76" y="21" fill="#6EFFB7" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="2">CAPTURED</text>
+  <g transform="translate(920, 1700)">
+    <rect width="140" height="40" rx="8" fill="#03040A" fill-opacity="0.85" stroke="#F4EDE4" stroke-opacity="0.20"/>
+    <text x="70" y="16" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="middle" letter-spacing="1">35.6762° N</text>
+    <text x="70" y="30" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="middle" letter-spacing="1">139.6503° E</text>
   </g>
-  <g transform="translate(180, 1480)">
-    <rect width="100" height="32" rx="16" fill="#9B5CFF" fill-opacity="0.16" stroke="#9B5CFF" stroke-opacity="0.5"/>
-    <text x="50" y="21" fill="#9B5CFF" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="2">KSPLAT</text>
+  <g transform="translate(940, 1458)">
+    <text fill="#6EFFB7" font-family="Inter, sans-serif" font-weight="600" font-size="13" letter-spacing="2" text-anchor="end">OPEN IN MAP →</text>
   </g>
-  <text x="40" y="1550" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="16" letter-spacing="1">2026.07.04 · PIXEL 8 PRO · 1.7m</text>
-  <text x="40" y="1578" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="16" letter-spacing="1">1,247,392 splats · 12.4 MB · ~/aurora/me.ksplat</text>
-  <text x="40" y="1640" fill="#9FA8C7" font-family="Inter, sans-serif" font-weight="600" font-size="12" letter-spacing="3">POSE</text>
-  <g transform="translate(40, 1660)">
+  <text x="40" y="1780" fill="#9FA8C7" font-family="Inter, sans-serif" font-weight="600" font-size="12" letter-spacing="3">POSE</text>
+  <g transform="translate(40, 1800)">
     <rect width="140" height="180" rx="20" fill="#9B5CFF" fill-opacity="0.20" stroke="#9B5CFF" stroke-width="2"/>
     <g transform="translate(70, 100)" fill="#6EFFB7">
-      <circle r="5"/>
-      <circle cx="-10" cy="12" r="4"/>
-      <circle cx="10" cy="12" r="4"/>
-      <circle cx="0" cy="24" r="4"/>
+      <circle r="5"/><circle cx="-10" cy="12" r="4"/><circle cx="10" cy="12" r="4"/><circle cx="0" cy="24" r="4"/>
     </g>
     <text x="70" y="160" fill="#F4EDE4" font-family="Inter, sans-serif" font-weight="600" font-size="14" text-anchor="middle">idle</text>
   </g>
-  <g transform="translate(190, 1660)">
+  <g transform="translate(190, 1800)">
     <rect width="140" height="180" rx="20" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
     <g transform="translate(70, 100)" fill="#9B5CFF" fill-opacity="0.6">
       <circle r="4"/>
-      <circle cx="15" cy="-5" r="3"/>
     </g>
     <text x="70" y="160" fill="#F4EDE4" fill-opacity="0.72" font-family="Inter, sans-serif" font-weight="500" font-size="14" text-anchor="middle">wave</text>
   </g>
-  <g transform="translate(340, 1660)">
+  <g transform="translate(340, 1800)">
     <rect width="140" height="180" rx="20" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
     <g transform="translate(70, 100)" fill="#9B5CFF" fill-opacity="0.6">
       <circle r="4"/>
-      <circle cx="0" cy="20" r="3"/>
     </g>
     <text x="70" y="160" fill="#F4EDE4" fill-opacity="0.72" font-family="Inter, sans-serif" font-weight="500" font-size="14" text-anchor="middle">bow</text>
   </g>
-  <g transform="translate(490, 1660)">
+  <g transform="translate(490, 1800)">
     <rect width="140" height="180" rx="20" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
     <g transform="translate(70, 100)" fill="#9B5CFF" fill-opacity="0.6">
       <circle r="4"/>
-      <circle cx="-12" cy="-2" r="3"/>
     </g>
     <text x="70" y="160" fill="#F4EDE4" fill-opacity="0.72" font-family="Inter, sans-serif" font-weight="500" font-size="14" text-anchor="middle">thumbs</text>
   </g>
-  <g transform="translate(640, 1660)">
-    <rect width="140" height="180" rx="20" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
-    <g transform="translate(70, 100)" fill="#9B5CFF" fill-opacity="0.6">
-      <circle r="4"/>
-      <circle cx="-12" cy="-10" r="3"/>
-      <circle cx="12" cy="-10" r="3"/>
-    </g>
-    <text x="70" y="160" fill="#F4EDE4" fill-opacity="0.72" font-family="Inter, sans-serif" font-weight="500" font-size="14" text-anchor="middle">cheer</text>
-  </g>
-  <g transform="translate(790, 1660)">
-    <rect width="140" height="180" rx="20" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
-    <g transform="translate(70, 100)" fill="#9B5CFF" fill-opacity="0.6">
-      <circle r="4"/>
-      <circle cx="15" cy="8" r="3"/>
-    </g>
-    <text x="70" y="160" fill="#F4EDE4" fill-opacity="0.72" font-family="Inter, sans-serif" font-weight="500" font-size="14" text-anchor="middle">spin</text>
-  </g>
-  <g transform="translate(40, 1890)">
+  <g transform="translate(40, 2010)">
     <rect width="320" height="72" rx="36" fill="#FFFFFF" fill-opacity="0.04" stroke="#F4EDE4" stroke-opacity="0.15"/>
-    <g transform="translate(36, 36)" stroke="#F4EDE4" stroke-width="2" fill="none" stroke-linecap="round">
-      <path d="M -8 8 L -8 -8 L 8 -8 L 8 0"/>
-      <line x1="-8" y1="0" x2="8" y2="0"/>
-      <line x1="-4" y1="4" x2="4" y2="4"/>
-    </g>
-    <text x="180" y="46" fill="#F4EDE4" font-family="Inter, sans-serif" font-weight="600" font-size="18" text-anchor="middle">Edit</text>
+    <text x="160" y="46" fill="#F4EDE4" font-family="Inter, sans-serif" font-weight="600" font-size="18" text-anchor="middle">Edit</text>
   </g>
-  <g transform="translate(380, 1890)">
+  <g transform="translate(380, 2010)">
     <rect width="320" height="72" rx="36" fill="#9B5CFF" fill-opacity="0.16" stroke="#9B5CFF" stroke-opacity="0.6" stroke-width="1.5"/>
-    <g transform="translate(36, 36)" stroke="#9B5CFF" stroke-width="2" fill="none" stroke-linecap="round">
-      <rect x="-10" y="-10" width="20" height="16" rx="2"/>
-      <circle cx="0" cy="-2" r="3"/>
-    </g>
     <text x="200" y="46" fill="#9B5CFF" font-family="Inter, sans-serif" font-weight="700" font-size="17" text-anchor="middle">Set wallpaper</text>
   </g>
-  <g transform="translate(720, 1890)">
+  <g transform="translate(720, 2010)">
     <rect width="320" height="72" rx="36" fill="#6EFFB7"/>
-    <g transform="translate(36, 36)" fill="#06070F">
-      <circle cx="-4" cy="-4" r="3"/>
-      <circle cx="4" cy="4" r="3"/>
-      <circle cx="-4" cy="4" r="3"/>
-      <line x1="-2" y1="-2" x2="2" y2="2" stroke="#06070F" stroke-width="1.5"/>
-      <line x1="-2" y1="2" x2="2" y2="-2" stroke="#06070F" stroke-width="1.5"/>
-    </g>
     <text x="190" y="46" fill="#06070F" font-family="Inter, sans-serif" font-weight="700" font-size="18" text-anchor="middle">Share</text>
   </g>
   <rect x="0" y="2300" width="1080" height="100" fill="#03040A"/>
   <line x1="0" y1="2300" x2="1080" y2="2300" stroke="#F4EDE4" stroke-opacity="0.08"/>
   <g transform="translate(140, 2340)" text-anchor="middle">
     <g fill="#6EFFB7" fill-opacity="0.8">
-      <circle cx="-12" cy="-12" r="3"/>
-      <circle cx="0" cy="-15" r="3"/>
-      <circle cx="12" cy="-10" r="3"/>
-      <circle cx="-6" cy="-3" r="3"/>
-      <circle cx="8" cy="2" r="3"/>
-      <circle cx="-3" cy="10" r="3"/>
+      <circle cx="-12" cy="-12" r="3"/><circle cx="0" cy="-15" r="3"/><circle cx="12" cy="-10" r="3"/>
+      <circle cx="-6" cy="-3" r="3"/><circle cx="8" cy="2" r="3"/><circle cx="-3" cy="10" r="3"/>
     </g>
     <text y="32" fill="#6EFFB7" fill-opacity="1" font-family="Inter, sans-serif" font-weight="600" font-size="13" letter-spacing="0.5">Avatars</text>
   </g>
   <g transform="translate(420, 2340)" text-anchor="middle">
-    <g fill="#F4EDE4" fill-opacity="0.6">
-      <circle cx="0" cy="-10" r="11" fill="none" stroke="#F4EDE4" stroke-width="2"/>
-      <path d="M -6 -12 L 6 -12 L 3 -6 L 6 -6 L -2 4 L 1 -6 L -6 -6 Z"/>
+    <g fill="none" stroke="#F4EDE4" stroke-opacity="0.6" stroke-width="2">
+      <path d="M -10 -10 L 10 -10 L 10 4 L 0 14 L -10 4 Z"/>
+      <circle cx="0" cy="-3" r="3" fill="#F4EDE4"/>
     </g>
-    <text y="32" fill="#F4EDE4" fill-opacity="0.5" font-family="Inter, sans-serif" font-weight="600" font-size="13" letter-spacing="0.5">Themes</text>
+    <text y="32" fill="#F4EDE4" fill-opacity="0.5" font-family="Inter, sans-serif" font-weight="600" font-size="13" letter-spacing="0.5">Map</text>
   </g>
   <g transform="translate(660, 2340)" text-anchor="middle">
     <g fill="none" stroke="#F4EDE4" stroke-opacity="0.6" stroke-width="2">
@@ -5236,10 +5272,8 @@
   <g transform="translate(940, 2340)" text-anchor="middle">
     <g fill="none" stroke="#F4EDE4" stroke-opacity="0.6" stroke-width="2">
       <circle cx="0" cy="-8" r="6"/>
-      <line x1="0" y1="-18" x2="0" y2="-14"/>
-      <line x1="0" y1="-2" x2="0" y2="2"/>
-      <line x1="-12" y1="-8" x2="-8" y2="-8"/>
-      <line x1="8" y1="-8" x2="12" y2="-8"/>
+      <line x1="0" y1="-18" x2="0" y2="-14"/><line x1="0" y1="-2" x2="0" y2="2"/>
+      <line x1="-12" y1="-8" x2="-8" y2="-8"/><line x1="8" y1="-8" x2="12" y2="-8"/>
     </g>
     <text y="32" fill="#F4EDE4" fill-opacity="0.5" font-family="Inter, sans-serif" font-weight="600" font-size="13" letter-spacing="0.5">Settings</text>
   </g>

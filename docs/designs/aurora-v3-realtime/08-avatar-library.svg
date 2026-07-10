@@ -37,17 +37,25 @@
     <rect width="68" height="44" rx="22" fill="#6EFFB7"/>
     <text x="34" y="29" fill="#06070F" font-family="Inter, sans-serif" font-weight="700" font-size="15" text-anchor="middle">All</text>
   </g>
-  <g transform="translate(120, 200)">
-    <rect width="128" height="44" rx="22" fill="#FFFFFF" stroke="#FFFFFF" stroke-opacity="0.06"/>
-    <text x="64" y="29" fill="#F4EDE4" font-family="Inter, sans-serif" font-weight="500" font-size="15" text-anchor="middle">Captured</text>
+  <g transform="translate(118, 200)">
+    <rect width="116" height="44" rx="22" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+    <text x="58" y="29" fill="#F4EDE4" font-family="Inter, sans-serif" font-weight="500" font-size="15" text-anchor="middle">Captured</text>
   </g>
-  <g transform="translate(260, 200)">
-    <rect width="128" height="44" rx="22" fill="#FFFFFF" stroke="#FFFFFF" stroke-opacity="0.06"/>
-    <text x="64" y="29" fill="#F4EDE4" font-family="Inter, sans-serif" font-weight="500" font-size="15" text-anchor="middle">Imported</text>
+  <g transform="translate(244, 200)">
+    <rect width="116" height="44" rx="22" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.06"/>
+    <text x="58" y="29" fill="#F4EDE4" font-family="Inter, sans-serif" font-weight="500" font-size="15" text-anchor="middle">Imported</text>
   </g>
-  <g transform="translate(400, 200)">
-    <rect width="140" height="44" rx="22" fill="rgba(155,92,255,0.2)" stroke="#9B5CFF" stroke-opacity="0.6"/>
-    <text x="70" y="29" fill="#9B5CFF" font-family="Inter, sans-serif" font-weight="600" font-size="15" text-anchor="middle">★ Favorites</text>
+  <g transform="translate(370, 200)">
+    <rect width="56" height="44" rx="22" fill="#9B5CFF" fill-opacity="0.20" stroke="#9B5CFF" stroke-opacity="0.6"/>
+    <text x="28" y="29" fill="#9B5CFF" font-family="Inter, sans-serif" font-weight="600" font-size="15" text-anchor="middle">★</text>
+  </g>
+  <g transform="translate(980, 200)">
+    <rect width="68" height="44" rx="22" fill="#FFFFFF" fill-opacity="0.04" stroke="#F4EDE4" stroke-opacity="0.15"/>
+    <g transform="translate(20, 22)" fill="none" stroke="#F4EDE4" stroke-width="2">
+      <path d="M -8 -8 L 8 -8 L 8 3 L 0 10 L -8 3 Z"/>
+      <circle cx="0" cy="-2" r="2" fill="#F4EDE4"/>
+    </g>
+    <text x="50" y="29" fill="#F4EDE4" font-family="Inter, sans-serif" font-weight="600" font-size="13" text-anchor="middle">Map</text>
   </g>
   <g transform="translate(40, 280)">
     <rect width="480" height="540" rx="28" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
@@ -507,10 +515,19 @@
       <circle cx="14" cy="13" r="3" fill="#6EFFB7"/>
       <text x="48" y="17" fill="#6EFFB7" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="1">CAPTURED</text>
     </g>
+    <g transform="translate(436, 44)">
+      <circle r="14" fill="#03040A" fill-opacity="0.85" stroke="#6EFFB7" stroke-width="1.5"/>
+      <path d="M 0 -7 L 5 -4 L 5 2 L 0 7 L -5 2 L -5 -4 Z" fill="none" stroke="#6EFFB7" stroke-width="1.2"/>
+      <circle cx="0" cy="-3" r="1.5" fill="#6EFFB7"/>
+    </g>
     <text x="28" y="380" fill="#F4EDE4" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="26" letter-spacing="-0.4">Me</text>
-    <text x="28" y="412" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="13" letter-spacing="1">1.2M · 12.4 MB · 2d</text>
-    <text x="28" y="450" fill="#9FA8C7" fill-opacity="0.6" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="1">HIGH · 60fps · LOCAL</text>
-    <text x="452" y="450" fill="#F4EDE4" fill-opacity="0.5" font-family="Inter, sans-serif" font-size="22" text-anchor="end">→</text>
+    <g transform="translate(28, 398)">
+      <circle cx="6" cy="10" r="3" fill="#6EFFB7"/>
+      <text x="16" y="14" fill="#F4EDE4" fill-opacity="0.72" font-family="Inter, sans-serif" font-size="14">Tokyo, JP</text>
+    </g>
+    <text x="28" y="448" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="13" letter-spacing="1">1.2M · 12.4 MB · 2d</text>
+    <text x="28" y="478" fill="#9FA8C7" fill-opacity="0.6" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="1">HIGH · 60fps · LOCAL</text>
+    <text x="452" y="478" fill="#F4EDE4" fill-opacity="0.5" font-family="Inter, sans-serif" font-size="22" text-anchor="end">→</text>
   </g>
   <g transform="translate(540, 280)">
     <rect width="480" height="540" rx="28" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
@@ -970,10 +987,19 @@
       <circle cx="14" cy="13" r="3" fill="#9B5CFF"/>
       <text x="48" y="17" fill="#9B5CFF" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="1">IMPORTED</text>
     </g>
+    <g transform="translate(436, 44)">
+      <circle r="14" fill="#03040A" fill-opacity="0.85" stroke="#9B5CFF" stroke-width="1.5"/>
+      <path d="M 0 -7 L 5 -4 L 5 2 L 0 7 L -5 2 L -5 -4 Z" fill="none" stroke="#9B5CFF" stroke-width="1.2"/>
+      <circle cx="0" cy="-3" r="1.5" fill="#9B5CFF"/>
+    </g>
     <text x="28" y="380" fill="#F4EDE4" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="26" letter-spacing="-0.4">Living Room</text>
-    <text x="28" y="412" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="13" letter-spacing="1">800K · 8.2 MB · 1w</text>
-    <text x="28" y="450" fill="#9FA8C7" fill-opacity="0.6" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="1">HIGH · 60fps · LOCAL</text>
-    <text x="452" y="450" fill="#F4EDE4" fill-opacity="0.5" font-family="Inter, sans-serif" font-size="22" text-anchor="end">→</text>
+    <g transform="translate(28, 398)">
+      <circle cx="6" cy="10" r="3" fill="#9B5CFF"/>
+      <text x="16" y="14" fill="#F4EDE4" fill-opacity="0.72" font-family="Inter, sans-serif" font-size="14">Shinjuku</text>
+    </g>
+    <text x="28" y="448" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="13" letter-spacing="1">800K · 8.2 MB · 1w</text>
+    <text x="28" y="478" fill="#9FA8C7" fill-opacity="0.6" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="1">HIGH · 60fps · LOCAL</text>
+    <text x="452" y="478" fill="#F4EDE4" fill-opacity="0.5" font-family="Inter, sans-serif" font-size="22" text-anchor="end">→</text>
   </g>
   <g transform="translate(40, 860)">
     <rect width="480" height="540" rx="28" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
@@ -1433,10 +1459,19 @@
       <circle cx="14" cy="13" r="3" fill="#FFB347"/>
       <text x="48" y="17" fill="#FFB347" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="1">CAPTURED</text>
     </g>
+    <g transform="translate(436, 44)">
+      <circle r="14" fill="#03040A" fill-opacity="0.85" stroke="#FFB347" stroke-width="1.5"/>
+      <path d="M 0 -7 L 5 -4 L 5 2 L 0 7 L -5 2 L -5 -4 Z" fill="none" stroke="#FFB347" stroke-width="1.2"/>
+      <circle cx="0" cy="-3" r="1.5" fill="#FFB347"/>
+    </g>
     <text x="28" y="380" fill="#F4EDE4" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="26" letter-spacing="-0.4">Studio</text>
-    <text x="28" y="412" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="13" letter-spacing="1">920K · 9.6 MB · 3d</text>
-    <text x="28" y="450" fill="#9FA8C7" fill-opacity="0.6" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="1">HIGH · 60fps · LOCAL</text>
-    <text x="452" y="450" fill="#F4EDE4" fill-opacity="0.5" font-family="Inter, sans-serif" font-size="22" text-anchor="end">→</text>
+    <g transform="translate(28, 398)">
+      <circle cx="6" cy="10" r="3" fill="#FFB347"/>
+      <text x="16" y="14" fill="#F4EDE4" fill-opacity="0.72" font-family="Inter, sans-serif" font-size="14">Shibuya</text>
+    </g>
+    <text x="28" y="448" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="13" letter-spacing="1">920K · 9.6 MB · 3d</text>
+    <text x="28" y="478" fill="#9FA8C7" fill-opacity="0.6" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="1">HIGH · 60fps · LOCAL</text>
+    <text x="452" y="478" fill="#F4EDE4" fill-opacity="0.5" font-family="Inter, sans-serif" font-size="22" text-anchor="end">→</text>
   </g>
   <g transform="translate(540, 860)">
     <rect width="480" height="540" rx="28" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
@@ -1896,10 +1931,19 @@
       <circle cx="14" cy="13" r="3" fill="#7BFFCE"/>
       <text x="48" y="17" fill="#7BFFCE" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="1">CAPTURED</text>
     </g>
+    <g transform="translate(436, 44)">
+      <circle r="14" fill="#03040A" fill-opacity="0.85" stroke="#7BFFCE" stroke-width="1.5"/>
+      <path d="M 0 -7 L 5 -4 L 5 2 L 0 7 L -5 2 L -5 -4 Z" fill="none" stroke="#7BFFCE" stroke-width="1.2"/>
+      <circle cx="0" cy="-3" r="1.5" fill="#7BFFCE"/>
+    </g>
     <text x="28" y="380" fill="#F4EDE4" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="26" letter-spacing="-0.4">Garden Path</text>
-    <text x="28" y="412" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="13" letter-spacing="1">1.4M · 14.2 MB · 5d</text>
-    <text x="28" y="450" fill="#9FA8C7" fill-opacity="0.6" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="1">HIGH · 60fps · LOCAL</text>
-    <text x="452" y="450" fill="#F4EDE4" fill-opacity="0.5" font-family="Inter, sans-serif" font-size="22" text-anchor="end">→</text>
+    <g transform="translate(28, 398)">
+      <circle cx="6" cy="10" r="3" fill="#7BFFCE"/>
+      <text x="16" y="14" fill="#F4EDE4" fill-opacity="0.72" font-family="Inter, sans-serif" font-size="14">Yokohama</text>
+    </g>
+    <text x="28" y="448" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="13" letter-spacing="1">1.4M · 14.2 MB · 5d</text>
+    <text x="28" y="478" fill="#9FA8C7" fill-opacity="0.6" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="1">HIGH · 60fps · LOCAL</text>
+    <text x="452" y="478" fill="#F4EDE4" fill-opacity="0.5" font-family="Inter, sans-serif" font-size="22" text-anchor="end">→</text>
   </g>
   <g transform="translate(40, 1440)">
     <rect width="480" height="540" rx="28" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
@@ -2359,10 +2403,19 @@
       <circle cx="14" cy="13" r="3" fill="#9B5CFF"/>
       <text x="48" y="17" fill="#9B5CFF" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="1">IMPORTED</text>
     </g>
+    <g transform="translate(436, 44)">
+      <circle r="14" fill="#03040A" fill-opacity="0.85" stroke="#9B5CFF" stroke-width="1.5"/>
+      <path d="M 0 -7 L 5 -4 L 5 2 L 0 7 L -5 2 L -5 -4 Z" fill="none" stroke="#9B5CFF" stroke-width="1.2"/>
+      <circle cx="0" cy="-3" r="1.5" fill="#9B5CFF"/>
+    </g>
     <text x="28" y="380" fill="#F4EDE4" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="26" letter-spacing="-0.4">Mountain</text>
-    <text x="28" y="412" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="13" letter-spacing="1">2.1M · 22.1 MB · 2w</text>
-    <text x="28" y="450" fill="#9FA8C7" fill-opacity="0.6" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="1">HIGH · 60fps · LOCAL</text>
-    <text x="452" y="450" fill="#F4EDE4" fill-opacity="0.5" font-family="Inter, sans-serif" font-size="22" text-anchor="end">→</text>
+    <g transform="translate(28, 398)">
+      <circle cx="6" cy="10" r="3" fill="#9B5CFF"/>
+      <text x="16" y="14" fill="#F4EDE4" fill-opacity="0.72" font-family="Inter, sans-serif" font-size="14">Hakone</text>
+    </g>
+    <text x="28" y="448" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="13" letter-spacing="1">2.1M · 22.1 MB · 2w</text>
+    <text x="28" y="478" fill="#9FA8C7" fill-opacity="0.6" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="1">HIGH · 60fps · LOCAL</text>
+    <text x="452" y="478" fill="#F4EDE4" fill-opacity="0.5" font-family="Inter, sans-serif" font-size="22" text-anchor="end">→</text>
   </g>
   <g transform="translate(540, 1440)">
     <rect width="480" height="540" rx="28" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
@@ -2822,15 +2875,24 @@
       <circle cx="14" cy="13" r="3" fill="#9B5CFF"/>
       <text x="48" y="17" fill="#9B5CFF" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="1">IMPORTED</text>
     </g>
+    <g transform="translate(436, 44)">
+      <circle r="14" fill="#03040A" fill-opacity="0.85" stroke="#9B5CFF" stroke-width="1.5"/>
+      <path d="M 0 -7 L 5 -4 L 5 2 L 0 7 L -5 2 L -5 -4 Z" fill="none" stroke="#9B5CFF" stroke-width="1.2"/>
+      <circle cx="0" cy="-3" r="1.5" fill="#9B5CFF"/>
+    </g>
     <text x="28" y="380" fill="#F4EDE4" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="26" letter-spacing="-0.4">Office</text>
-    <text x="28" y="412" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="13" letter-spacing="1">750K · 7.8 MB · 2w</text>
-    <text x="28" y="450" fill="#9FA8C7" fill-opacity="0.6" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="1">HIGH · 60fps · LOCAL</text>
-    <text x="452" y="450" fill="#F4EDE4" fill-opacity="0.5" font-family="Inter, sans-serif" font-size="22" text-anchor="end">→</text>
+    <g transform="translate(28, 398)">
+      <circle cx="6" cy="10" r="3" fill="#9B5CFF"/>
+      <text x="16" y="14" fill="#F4EDE4" fill-opacity="0.72" font-family="Inter, sans-serif" font-size="14">Asakusa</text>
+    </g>
+    <text x="28" y="448" fill="#9FA8C7" font-family="JetBrains Mono, monospace" font-size="13" letter-spacing="1">750K · 7.8 MB · 2w</text>
+    <text x="28" y="478" fill="#9FA8C7" fill-opacity="0.6" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="1">HIGH · 60fps · LOCAL</text>
+    <text x="452" y="478" fill="#F4EDE4" fill-opacity="0.5" font-family="Inter, sans-serif" font-size="22" text-anchor="end">→</text>
   </g>
   <g transform="translate(540, 2240)">
     <circle r="56" fill="url(#fabGrad)"/>
     <circle r="64" fill="none" stroke="#9B5CFF" stroke-opacity="0.3" stroke-width="3"/>
-    <circle r="14" fill="#06070F"/>
+    <circle r="14" fill="#06040A"/>
     <circle r="6" fill="#6EFFB7"/>
   </g>
   <rect x="0" y="2300" width="1080" height="100" fill="#03040A"/>
@@ -2847,11 +2909,11 @@
     <text y="32" fill="#6EFFB7" fill-opacity="1" font-family="Inter, sans-serif" font-weight="600" font-size="13" letter-spacing="0.5">Avatars</text>
   </g>
   <g transform="translate(420, 2340)" text-anchor="middle">
-    <g fill="#F4EDE4" fill-opacity="0.6">
-      <circle cx="0" cy="-10" r="11" fill="none" stroke="#F4EDE4" stroke-width="2"/>
-      <path d="M -6 -12 L 6 -12 L 3 -6 L 6 -6 L -2 4 L 1 -6 L -6 -6 Z"/>
+    <g fill="none" stroke="#F4EDE4" stroke-opacity="0.6" stroke-width="2">
+      <path d="M -10 -10 L 10 -10 L 10 4 L 0 14 L -10 4 Z"/>
+      <circle cx="0" cy="-3" r="3" fill="#F4EDE4"/>
     </g>
-    <text y="32" fill="#F4EDE4" fill-opacity="0.5" font-family="Inter, sans-serif" font-weight="600" font-size="13" letter-spacing="0.5">Themes</text>
+    <text y="32" fill="#F4EDE4" fill-opacity="0.5" font-family="Inter, sans-serif" font-weight="600" font-size="13" letter-spacing="0.5">Map</text>
   </g>
   <g transform="translate(660, 2340)" text-anchor="middle">
     <g fill="none" stroke="#F4EDE4" stroke-opacity="0.6" stroke-width="2">
