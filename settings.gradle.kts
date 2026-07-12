@@ -45,6 +45,7 @@ include(":core:system")           // WallpaperService + AdaptiveRenderStrategy +
 
 // ===== Feature layer (Android library modules) =====
 include(":feature:scenes")        // 3DGS asset library list, detail, preview
+include(":feature:avatars")       // v3.2 — avatar library + detail + map + capture
 include(":feature:editor")        // Editor: Brush / Lasso / Gizmo / Inspector
 include(":feature:roam")          // Orbit / FPS / Cinematic / Trackball
 include(":feature:themes")        // Theme management / Live Wallpaper preview

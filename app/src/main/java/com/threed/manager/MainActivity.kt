@@ -2,20 +2,27 @@ package com.threed.manager
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.core.view.WindowCompat
+import com.threed.manager.core.design.theme.AuroraTheme
+import com.threed.manager.navigation.AuroraRootNav
 
 /**
- * Phase 4 verification entry point.
+ * Main entry — Cinematic Dark Aurora v3.2.
  *
- * Uses a native [SplatBackgroundView] (no Compose) so the first frame
- * renders on software-rendered emulators without ANR. The view draws a
- * procedural 3DGS-style point cloud and updates yaw/pitch from the real
- * Android SensorManager (TYPE_GAME_ROTATION_VECTOR). Sensor injection
- * via `adb emu sensor set acceleration ...` drives the rotation
- * end-to-end.
+ * Hosts the top-level [AuroraRootNav] Compose graph. The legacy native
+ * [SplatBackgroundView] can still be invoked by [ThreeDManagerApp] via
+ * the service-locator; this Activity uses Compose-only chrome.
  */
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        // Edge-to-edge: transparent system bars over our Void/Base background.
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        setContent {
+            AuroraTheme {
+                AuroraRootNav()
+            }
+        }
     }
 }

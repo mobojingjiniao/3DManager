@@ -70,6 +70,7 @@ dependencies {
     implementation(project(":core:system"))
 
     implementation(project(":feature:scenes"))
+    implementation(project(":feature:avatars"))
     implementation(project(":feature:editor"))
     implementation(project(":feature:roam"))
     implementation(project(":feature:themes"))
