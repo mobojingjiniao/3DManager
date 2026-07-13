@@ -47,6 +47,10 @@ kotest = "5.9.1"
 truth = "1.4.4"
 coroutines-test = "1.9.0"
 
+# CameraX + Location
+camerax = "1.3.4"
+play-location = "21.3.0"
+
 [libraries]
 # Core
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -109,6 +113,14 @@ turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine
 kotest-property = { group = "io.kotest", name = "kotest-property", version.ref = "kotest" }
 truth = { group = "com.google.truth", name = "truth", version.ref = "truth" }
 kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines-test" }
+
+# CameraX
+androidx-camera-core = { group = "androidx.camera", name = "camera-core", version.ref = "camerax" }
+androidx-camera-camera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "camerax" }
+androidx-camera-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "camerax" }
+androidx-camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "camerax" }
+# Location (Google Play Services)
+androidx-play-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "play-location" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

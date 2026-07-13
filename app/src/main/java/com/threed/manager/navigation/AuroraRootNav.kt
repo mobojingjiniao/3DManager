@@ -99,6 +99,7 @@ fun AuroraRootNav(nav: NavHostController = rememberNavController()) {
                     onShare = { nav.navigate(AuroraRoutes.share(raw)) },
                     onEdit = { /* TODO Phase 6 */ },
                     onOpenMap = { nav.navigate(AuroraRoutes.Map) },
+                    onSetWallpaper = { /* handled inside DetailContent */ },
                 )
             }
             composable(

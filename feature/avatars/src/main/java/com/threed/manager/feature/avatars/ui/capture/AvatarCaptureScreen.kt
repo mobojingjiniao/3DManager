@@ -34,6 +34,7 @@ import com.threed.manager.core.design.components.AuroraChip
 import com.threed.manager.core.design.components.AuroraTopBar
 import com.threed.manager.core.design.components.ChipTone
 import com.threed.manager.core.design.theme.AuroraTheme
+import com.threed.manager.feature.avatars.capture.CaptureStage
 
 /**
  * Avatar capture flow — Phase 0 stub.
@@ -48,7 +49,7 @@ import com.threed.manager.core.design.theme.AuroraTheme
 @Composable
 fun AvatarCaptureScreen(onBack: () -> Unit, onClose: () -> Unit) {
     val colors = AuroraTheme.colors
-    var stage by remember { mutableStateOf(CaptureStage.READY) }
+    var stage by remember { mutableStateOf(CaptureStage.IDLE) }
     var frameCount by remember { mutableStateOf(0) }
 
     AuroraBackground {
@@ -108,10 +109,12 @@ fun AvatarCaptureScreen(onBack: () -> Unit, onClose: () -> Unit) {
                 // Progress
                 Text(
                     text = when (stage) {
-                        CaptureStage.READY -> "READY · 0 / 24 frames"
+                        CaptureStage.IDLE -> "READY · 0 / 24 frames"
                         CaptureStage.CAPTURING -> "CAPTURING · $frameCount / 24"
                         CaptureStage.UPLOADING -> "UPLOADING · 62%"
                         CaptureStage.CONVERTING -> "CONVERTING · ETA 2m"
+                        CaptureStage.COMPLETE -> "COMPLETE"
+                        CaptureStage.FAILED -> "FAILED"
                     },
                     color = colors.TextPrimary,
                     style = AuroraTheme.type.bodyLg.copy(fontWeight = FontWeight.Bold),
@@ -127,10 +130,12 @@ fun AvatarCaptureScreen(onBack: () -> Unit, onClose: () -> Unit) {
                     Box(
                         modifier = Modifier
                             .fillMaxWidth(fraction = when (stage) {
-                                CaptureStage.READY -> 0f
+                                CaptureStage.IDLE -> 0f
                                 CaptureStage.CAPTURING -> (frameCount / 24f)
                                 CaptureStage.UPLOADING -> 0.62f
                                 CaptureStage.CONVERTING -> 0.85f
+                                CaptureStage.COMPLETE -> 1f
+                                CaptureStage.FAILED -> 0f
                             })
                             .height(6.dp)
                             .clip(RoundedCornerShape(3.dp))
@@ -177,5 +182,3 @@ fun AvatarCaptureScreen(onBack: () -> Unit, onClose: () -> Unit) {
         }
     }
 }
-
-private enum class CaptureStage { READY, CAPTURING, UPLOADING, CONVERTING }

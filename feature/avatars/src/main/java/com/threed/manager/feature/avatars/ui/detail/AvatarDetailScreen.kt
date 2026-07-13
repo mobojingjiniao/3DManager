@@ -59,6 +59,8 @@ fun AvatarDetailScreen(
     onShare: () -> Unit,
     onEdit: () -> Unit,
     onOpenMap: () -> Unit,
+    onSetWallpaper: () -> Unit,
+    onTabNavigate: (String) -> Unit = {},
     vm: AvatarDetailViewModel = viewModel(),
 ) {
     val avatar by vm.get(avatarId).collectAsStateWithLifecycle(initialValue = null)
@@ -77,6 +79,7 @@ fun AvatarDetailScreen(
                     onShare = onShare,
                     onEdit = onEdit,
                     onOpenMap = onOpenMap,
+                    onSetWallpaper = onSetWallpaper,
                 )
             }
             AuroraBottomBar(
@@ -94,6 +97,7 @@ private fun DetailContent(
     onShare: () -> Unit,
     onEdit: () -> Unit,
     onOpenMap: () -> Unit,
+    onSetWallpaper: () -> Unit,
 ) {
     val colors = AuroraTheme.colors
     var selectedPoseId by remember { mutableStateOf(avatar.metadata.posePreset ?: "idle") }
@@ -250,7 +254,7 @@ private fun DetailContent(
             )
             AuroraButton(
                 text = "Wallpaper",
-                onClick = {},
+                onClick = onSetWallpaper,
                 variant = AuroraButtonVariant.OutlineViolet,
                 size = AuroraButtonSize.MD,
                 modifier = Modifier.weight(1f),

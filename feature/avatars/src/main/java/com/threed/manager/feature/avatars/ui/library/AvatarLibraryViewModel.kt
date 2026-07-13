@@ -12,6 +12,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
 
 enum class AvatarFilter { ALL, CAPTURED, IMPORTED, FAVORITES }
 
@@ -39,5 +40,7 @@ class AvatarLibraryViewModel : ViewModel() {
         }.stateIn(viewModelScope, SharingStarted.Eagerly, AvatarLibraryUiState(isLoading = true))
 
     fun setFilter(value: AvatarFilter) { filter.value = value }
-    fun toggleFavorite(id: AvatarId) = repo.toggleFavorite(id)
+    fun toggleFavorite(id: AvatarId) {
+        viewModelScope.launch { repo.toggleFavorite(id) }
+    }
 }

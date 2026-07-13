@@ -6,6 +6,7 @@ import com.threed.manager.core.sensor.FakeSensorSource
 import com.threed.manager.core.sensor.RoamingController
 import com.threed.manager.core.sensor.RoamingMode
 import com.threed.manager.core.sceneapi.SplatController
+import com.threed.manager.feature.avatars.AvatarRepositoryProvider
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 
@@ -48,6 +49,8 @@ class ThreeDManagerApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        // Initialize the persistent avatar repository (Room-backed, seeded).
+        AvatarRepositoryProvider.init(this)
         // AndroidSensorSource needs an explicit start() to begin
         // receiving sensor events. Without this the flow stays empty.
         sensorSource.start()

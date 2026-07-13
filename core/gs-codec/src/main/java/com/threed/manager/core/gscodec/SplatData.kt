@@ -20,4 +20,17 @@ data class SplatData(
     val shCoefficients: FloatArray,  // flattened SH bands 1..N_SH
     val shDegree: Int,               // 0, 1, 2, or 3
     val metadata: Map<String, String> = emptyMap(),
-)
+) {
+    companion object {
+        fun empty(format: Format): SplatData = SplatData(
+            format = format,
+            splatCount = 0,
+            positions = FloatArray(0),
+            scales = FloatArray(0),
+            rotations = FloatArray(0),
+            colors = FloatArray(0),
+            shCoefficients = FloatArray(0),
+            shDegree = 0,
+        )
+    }
+}
